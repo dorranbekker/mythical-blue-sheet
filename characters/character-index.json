@@ -21,12 +21,12 @@
   },
   {
     "id": "af8967c8-8cde-4107-8eda-faa1dff00147",
-    "name": "Test3",
-    "armorClass": "15",
-    "hpCurrent": "9",
-    "hpMax": "24",
-    "passivePerception": "",
+    "name": "Test",
+    "armorClass": "14",
+    "hpCurrent": "22",
+    "hpMax": "30",
+    "passivePerception": "12",
     "file": "characters/af8967c8-8cde-4107-8eda-faa1dff00147.json",
-    "updatedAt": "2026-05-18T21:54:18.280Z"
+    "updatedAt": "2026-05-18T21:54:44.744Z"
   }
 ]
