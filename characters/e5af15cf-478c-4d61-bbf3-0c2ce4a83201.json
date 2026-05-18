@@ -1,6 +1,6 @@
 {
   "id": "e5af15cf-478c-4d61-bbf3-0c2ce4a83201",
-  "updatedAt": "2026-05-18T14:33:24.863Z",
+  "updatedAt": "2026-05-18T14:33:34.351Z",
   "summary": {
     "name": "Test",
     "armorClass": "14",
@@ -63,7 +63,7 @@
     },
     {
       "index": 13,
-      "value": "2"
+      "value": ""
     },
     {
       "index": 14,
@@ -71,15 +71,15 @@
     },
     {
       "index": 15,
-      "value": "2"
+      "value": ""
     },
     {
       "index": 16,
-      "value": "14"
+      "value": ""
     },
     {
       "index": 17,
-      "value": "4"
+      "value": ""
     },
     {
       "index": 18,
@@ -303,7 +303,7 @@
     },
     {
       "index": 73,
-      "value": "Let's test a bit more and add some info on here. "
+      "value": ""
     },
     {
       "index": 74,
