@@ -6,8 +6,9 @@
     "hpCurrent": "22",
     "hpMax": "30",
     "passivePerception": "",
+    "currentConditions": "poisoned/petrified",
     "file": "characters/e5af15cf-478c-4d61-bbf3-0c2ce4a83201.json",
-    "updatedAt": "2026-05-19T09:39:55.246Z"
+    "updatedAt": "2026-05-19T11:15:15.991Z"
   },
   {
     "id": "d6caff9b-abf2-410c-a688-55b4218a43a8",
