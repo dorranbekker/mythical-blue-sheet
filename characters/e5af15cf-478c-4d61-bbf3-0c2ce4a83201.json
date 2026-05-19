@@ -1,6 +1,6 @@
 {
   "id": "e5af15cf-478c-4d61-bbf3-0c2ce4a83201",
-  "updatedAt": "2026-05-19T14:07:37.614Z",
+  "updatedAt": "2026-05-19T14:09:42.180Z",
   "summary": {
     "name": "Test",
     "armorClass": "14",
@@ -696,43 +696,11 @@
     },
     {
       "index": 171,
-      "value": false
+      "value": "false"
     },
     {
       "index": 172,
-      "value": false
-    },
-    {
-      "index": 173,
-      "value": false
-    },
-    {
-      "index": 174,
-      "value": ""
-    },
-    {
-      "index": 175,
-      "value": ""
-    },
-    {
-      "index": 176,
-      "value": ""
-    },
-    {
-      "index": 177,
-      "value": ""
-    },
-    {
-      "index": 178,
-      "value": ""
-    },
-    {
-      "index": 179,
-      "value": ""
-    },
-    {
-      "index": 180,
-      "value": ""
+      "value": "false"
     }
   ]
 }
