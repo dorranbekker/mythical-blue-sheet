@@ -9,5 +9,16 @@
     "currentConditions": "poisoned/petrified",
     "file": "characters/e5af15cf-478c-4d61-bbf3-0c2ce4a83201.json",
     "updatedAt": "2026-05-19T15:05:34.783Z"
+  },
+  {
+    "id": "6838aa74-5c72-44a1-bdde-7c759165d446",
+    "name": "Lillith",
+    "armorClass": "",
+    "hpCurrent": "",
+    "hpMax": "",
+    "passivePerception": "",
+    "currentConditions": "",
+    "file": "characters/6838aa74-5c72-44a1-bdde-7c759165d446.json",
+    "updatedAt": "2026-05-19T15:24:31.760Z"
   }
 ]
