@@ -1,12 +1,12 @@
 {
   "id": "e5af15cf-478c-4d61-bbf3-0c2ce4a83201",
-  "updatedAt": "2026-05-19T11:15:26.542Z",
+  "updatedAt": "2026-05-19T14:06:51.122Z",
   "summary": {
     "name": "Test",
     "armorClass": "14",
     "hpCurrent": "22",
     "hpMax": "30",
-    "passivePerception": "",
+    "passivePerception": "12",
     "currentConditions": "poisoned/petrified"
   },
   "fields": [
@@ -68,11 +68,11 @@
     },
     {
       "index": 14,
-      "value": "12"
+      "value": "2"
     },
     {
       "index": 15,
-      "value": ""
+      "value": "12"
     },
     {
       "index": 16,
