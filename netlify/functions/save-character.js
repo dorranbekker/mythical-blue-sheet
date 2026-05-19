@@ -62,16 +62,17 @@ exports.handler = async (event) => {
       index = JSON.parse(Buffer.from(indexFile.content, "base64").toString("utf8"));
     }
 
-    const summary = {
-      id: data.id,
-      name: data.summary?.name || "Unnamed Character",
-      armorClass: data.summary?.armorClass || "",
-      hpCurrent: data.summary?.hpCurrent || "",
-      hpMax: data.summary?.hpMax || "",
-      passivePerception: data.summary?.passivePerception || "",
-      file: characterPath,
-      updatedAt: data.updatedAt
-    };
+const summary = {
+  id: data.id,
+  name: data.summary?.name || "Unnamed Character",
+  armorClass: data.summary?.armorClass || "",
+  hpCurrent: data.summary?.hpCurrent || "",
+  hpMax: data.summary?.hpMax || "",
+  passivePerception: data.summary?.passivePerception || "",
+  currentConditions: data.summary?.currentConditions || "",
+  file: characterPath,
+  updatedAt: data.updatedAt
+};
 
     const existingIndex = index.findIndex(c => c.id === data.id);
 
