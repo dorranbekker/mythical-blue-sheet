@@ -9,15 +9,5 @@
     "currentConditions": "poisoned/petrified",
     "file": "characters/e5af15cf-478c-4d61-bbf3-0c2ce4a83201.json",
     "updatedAt": "2026-05-19T14:24:17.223Z"
-  },
-  {
-    "id": "23c03e6f-b0bb-4ad7-be37-c917fd216c93",
-    "name": "Unnamed Character",
-    "armorClass": "",
-    "hpCurrent": "",
-    "hpMax": "",
-    "passivePerception": "",
-    "file": "characters/23c03e6f-b0bb-4ad7-be37-c917fd216c93.json",
-    "updatedAt": "2026-05-19T08:38:24.823Z"
   }
 ]
