@@ -1,9 +1,9 @@
 {
   "id": "af8967c8-8cde-4107-8eda-faa1dff00147",
-  "updatedAt": "2026-05-19T11:14:55.593Z",
+  "updatedAt": "2026-05-19T11:15:38.376Z",
   "summary": {
     "name": "Test",
-    "armorClass": "1e",
+    "armorClass": "16",
     "hpCurrent": "22",
     "hpMax": "30",
     "passivePerception": "12",
@@ -48,7 +48,7 @@
     },
     {
       "index": 9,
-      "value": "1e"
+      "value": "16"
     },
     {
       "index": 10,
