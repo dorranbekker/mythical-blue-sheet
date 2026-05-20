@@ -1,6 +1,6 @@
 {
   "id": "2ffc36b4-2429-40ba-9c61-7f2e8b0e195c",
-  "updatedAt": "2026-05-20T10:57:09.125Z",
+  "updatedAt": "2026-05-20T10:58:53.318Z",
   "summary": {
     "name": "Nimue",
     "armorClass": "",
@@ -60,7 +60,7 @@
     },
     {
       "index": 12,
-      "value": ""
+      "value": "1D6"
     },
     {
       "index": 13,
@@ -692,7 +692,7 @@
     },
     {
       "index": 170,
-      "value": ""
+      "value": "Common, Aequor"
     },
     {
       "index": 171,
