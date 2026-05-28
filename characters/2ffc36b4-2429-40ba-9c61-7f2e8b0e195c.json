@@ -1,6 +1,6 @@
 {
   "id": "2ffc36b4-2429-40ba-9c61-7f2e8b0e195c",
-  "updatedAt": "2026-05-28T11:51:53.306Z",
+  "updatedAt": "2026-05-28T11:53:01.021Z",
   "summary": {
     "name": "Nimue",
     "armorClass": "",
@@ -396,7 +396,7 @@
     },
     {
       "index": 96,
-      "value": ""
+      "value": "Guidance [Cleric Initiate]"
     },
     {
       "index": 97,
@@ -404,7 +404,7 @@
     },
     {
       "index": 98,
-      "value": ""
+      "value": "touch"
     },
     {
       "index": 99,
@@ -428,7 +428,7 @@
     },
     {
       "index": 104,
-      "value": ""
+      "value": "Spare the Dying [Cleric Initiate]"
     },
     {
       "index": 105,
@@ -436,7 +436,7 @@
     },
     {
       "index": 106,
-      "value": ""
+      "value": "15ft"
     },
     {
       "index": 107,
@@ -692,14 +692,46 @@
     },
     {
       "index": 170,
-      "value": "Common, Aequor"
-    },
-    {
-      "index": 171,
       "value": ""
     },
     {
+      "index": 171,
+      "value": false
+    },
+    {
       "index": 172,
+      "value": false
+    },
+    {
+      "index": 173,
+      "value": false
+    },
+    {
+      "index": 174,
+      "value": ""
+    },
+    {
+      "index": 175,
+      "value": ""
+    },
+    {
+      "index": 176,
+      "value": ""
+    },
+    {
+      "index": 177,
+      "value": ""
+    },
+    {
+      "index": 178,
+      "value": "Common, Aequor"
+    },
+    {
+      "index": 179,
+      "value": ""
+    },
+    {
+      "index": 180,
       "value": "Spear, 2 Daggers, Arcane Focus (crystal), Dungeoneer's Pack"
     }
   ]
