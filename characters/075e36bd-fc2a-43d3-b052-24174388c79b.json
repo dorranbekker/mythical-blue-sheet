@@ -1,6 +1,6 @@
 {
   "id": "075e36bd-fc2a-43d3-b052-24174388c79b",
-  "updatedAt": "2026-05-30T18:59:31.996Z",
+  "updatedAt": "2026-05-30T19:01:58.211Z",
   "summary": {
     "name": "Nimue",
     "armorClass": "13",
@@ -316,7 +316,7 @@
     },
     {
       "index": 76,
-      "value": ""
+      "value": "Common\n"
     },
     {
       "index": 77,
@@ -375,17 +375,17 @@
   "customLists": {
     "feats": [
       {
-        "name": "Goose: Egg",
-        "short": "Short summary of what this feature does.",
+        "name": "Goose: Golden Egg",
+        "short": "Give inspiration at critical hit. ",
         "resource": "",
-        "details": "",
+        "details": "Whenever you make a critical hit, you can take or give a heroic inspiration. Giving can only be done to allies within 30 ft of you.",
         "open": false
       },
       {
-        "name": "Species Trait",
-        "short": "Short summary of what this trait does.",
-        "resource": "",
-        "details": "",
+        "name": "Goose: Corrupted Egg",
+        "short": "At 1/2 health, DC15 dex save or 2d8 force and 10ft push.",
+        "resource": "1/1 Long Rest",
+        "details": "When you are equal to or below 1/2th of health, you explode in frustration. Unleashing a burst of energy with a 15 ft radius around you (once per long rest). Those within your vicinity (allies and enemies alike) will need to make a dexterity saving throw (DC 15). Upon failure, they’ll be pushed 10 ft away and take 2D8 force damage. Upon a successful save, they’ll only take half the damage.",
         "open": false
       },
       {
