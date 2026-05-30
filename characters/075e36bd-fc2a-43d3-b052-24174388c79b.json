@@ -1,6 +1,6 @@
 {
   "id": "075e36bd-fc2a-43d3-b052-24174388c79b",
-  "updatedAt": "2026-05-30T19:16:57.678Z",
+  "updatedAt": "2026-05-30T19:20:12.590Z",
   "summary": {
     "name": "Nimue",
     "armorClass": "13",
@@ -393,6 +393,20 @@
         "short": "Ability to breathe and move above and below water.",
         "resource": "",
         "details": "Aeternians have grown gills, webbing between their phalanges, and translucent pearl-like scales which become  \nvisible underwater; allowing them to breathe and swim underwater no different than on land.  ",
+        "open": false
+      },
+      {
+        "name": "Cold Climate Adept",
+        "short": "Unbothered by cold climate.",
+        "resource": "",
+        "details": "Aeternians have adapted to the cold of the deep, allowing them to become unbothered by cold climate  \ntemperatures, though they may require more hydration in warmer climates.  ",
+        "open": false
+      },
+      {
+        "name": "Bioluminescence",
+        "short": "5/15ft of emitting dim light in natural darkness.",
+        "resource": "",
+        "details": "Before the Aeternians had discovered how to light their underwater Queendom, they themselves emitted light  in darkness through bioluminescence.  \n\nWhen in natural darkness, the scales of the Aeternians softly exude a dim light. On land their scales are less  on the surface of their skin; therefore they only emit dim light for 5 ft, while underwater their scales surface,  due to which the Aeternians’ bioluminescence is strengthened to emitting dim light for 15 ft. The  bioluminescence does not shine within magical darkness.  \n\nThe bioluminescence effect comes from releasing the stored light within the scales of the Aeternian.  \nGenerally, 6–8 hours of exposure to a light source is required to store enough light to generate the effect.  As such, in covert situations, Aeternians who do not wish to shed light will ensure to either not be exposed  to a light source, or to fully cover themselves. However, the lack of natural light is regarded as an indication  of shady business; an Aeternian who does not emit bioluminescence is commonly viewed with suspicion  \nby others of their kin. ",
         "open": false
       }
     ],
