@@ -48,11 +48,11 @@ exports.handler = async (event) => {
 
     const characterPath = `characters/${data.id}.json`;
 
-    await saveFile(
-      characterPath,
-      data,
-      `Save character ${data.summary?.name || data.id}`
-    );
+await saveFile(
+  characterPath,
+  data,
+  `[skip netlify] Save character ${data.summary?.name || data.id}`
+);
 
     const indexFile = await getFile("characters/character-index.json");
 
@@ -82,11 +82,11 @@ const summary = {
       index.push(summary);
     }
 
-    await saveFile(
-      "characters/character-index.json",
-      index,
-      `Update character index`
-    );
+await saveFile(
+  "characters/character-index.json",
+  index,
+  `[skip netlify] Update character index`
+);
 
     return {
       statusCode: 200,
