@@ -1541,8 +1541,8 @@ background-position: top center;
       </div>
 <div class="hdr-row r3">
   <div class="hstat"><label>Armor Class</label><input type="text" placeholder="—" /></div>
-  <div class="hstat"><label>HP Current</label><input type="text" placeholder="—" /></div>
-  <div class="hstat"><label>HP Max</label><input type="text" placeholder="—" /></div>
+  <div class="hstat"><label>HP Current</label><input id="hpCurrentInput" type="text" placeholder="—" /></div>
+  <div class="hstat"><label>HP Max</label><input id="hpMaxInput" type="text" placeholder="—" /></div>
   <div class="hstat"><label>Hit Dice</label><input type="text" placeholder="5d8" /></div>
   <div class="hstat wide conditions"><label>Current Conditions</label><input type="text" placeholder="poisoned, stunned…" /></div>
 <div class="hstat wide exhaustion">
@@ -2348,6 +2348,19 @@ resetWeaponRows(character.customLists?.weapons || DEFAULT_WEAPON_ROWS);
 resetSpellRows(character.customLists?.spells || DEFAULT_SPELL_ROWS);
 applyUiState(character.uiState || {});
 
+// HP is also stored explicitly in the character summary.
+// Reapply it by id so layout changes cannot shift these two fields.
+const hpCurrentInput = document.getElementById("hpCurrentInput");
+const hpMaxInput = document.getElementById("hpMaxInput");
+
+if (hpCurrentInput && character.summary?.hpCurrent !== undefined) {
+  hpCurrentInput.value = character.summary.hpCurrent || "";
+}
+
+if (hpMaxInput && character.summary?.hpMax !== undefined) {
+  hpMaxInput.value = character.summary.hpMax || "";
+}
+
 showSheet();
 }
 
@@ -2443,7 +2456,14 @@ async function renderCharacterList() {
   let characters = [];
 
   try {
-    const response = await fetch(`https://raw.githubusercontent.com/adrianawolfie/mythical-blue-sheet/main/characters/character-index.json?cacheBust=${Date.now()}`);
+    const response = await fetch(`/.netlify/functions/get-character-index?cacheBust=${Date.now()}`, {
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+      throw new Error(await response.text());
+    }
+
     characters = await response.json();
   } catch (error) {
     console.error(error);
@@ -2457,7 +2477,7 @@ async function renderCharacterList() {
   }
 
   list.innerHTML = characters.map(character => `
-    <div class="character-card" data-file="${character.file}">
+    <div class="character-card" data-id="${character.id}" data-file="${character.file}">
       <strong>${character.name}</strong><br>
       Armor Class: ${character.armorClass || "—"}<br>
       Hit Points: ${character.hpCurrent || "—"} / ${character.hpMax || "—"}<br>
@@ -2468,9 +2488,21 @@ async function renderCharacterList() {
 
   document.querySelectorAll(".character-card").forEach(card => {
     card.addEventListener("click", async () => {
-      const response = await fetch(`https://raw.githubusercontent.com/adrianawolfie/mythical-blue-sheet/main/${card.dataset.file}?cacheBust=${Date.now()}`);
-      const character = await response.json();
-      loadCharacter(character);
+      try {
+        const response = await fetch(`/.netlify/functions/get-character?id=${encodeURIComponent(card.dataset.id)}&cacheBust=${Date.now()}`, {
+          cache: "no-store"
+        });
+
+        if (!response.ok) {
+          throw new Error(await response.text());
+        }
+
+        const character = await response.json();
+        loadCharacter(character);
+      } catch (error) {
+        console.error(error);
+        alert("Could not open this character.");
+      }
     });
   });
 }
