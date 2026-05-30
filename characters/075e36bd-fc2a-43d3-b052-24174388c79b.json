@@ -1,6 +1,6 @@
 {
   "id": "075e36bd-fc2a-43d3-b052-24174388c79b",
-  "updatedAt": "2026-05-30T19:39:48.001Z",
+  "updatedAt": "2026-05-30T19:40:58.134Z",
   "summary": {
     "name": "Nimue",
     "armorClass": "13",
@@ -428,6 +428,13 @@
         "short": "Guidance & Spare the Dying, Healing Word",
         "resource": "1/1 Long Rest",
         "details": "Aeternians are as versatile as their surface-born counterparts: humans. Depending on their origin they gain  a matching feat (gain an Origin feat of choice). -> Cleric Initiate\n\nTwo Cantrips. You learn two cantrips of your choice from the Cleric, Druid, or Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat's spells (choose when you select this feat). -> Charisma; Guidance & Spare the Dying\n\nLevel 1 Spell. Choose a level 1 spell from the same list you selected for this feat's cantrips. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have. -> Healing Word\n\nSpell Change. Whenever you gain a new level, you can replace one of the spells you chose for this feat with a different spell of the same level from the chosen spell list.\n\nRepeatable. You can take this feat more than once, but you must choose a different spell list each time.",
+        "open": false
+      },
+      {
+        "name": "Resourceful",
+        "short": "Gain Heroic Inspiration at Long Rest",
+        "resource": "1/1 Long Rest",
+        "details": "Similar to their surface-born counterparts (humans), Aeternians gain Heroic Inspiration whenever they finish  a Long Rest.",
         "open": false
       }
     ],
