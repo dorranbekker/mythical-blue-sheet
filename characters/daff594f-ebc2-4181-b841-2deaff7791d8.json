@@ -1,12 +1,12 @@
 {
   "id": "daff594f-ebc2-4181-b841-2deaff7791d8",
-  "updatedAt": "2026-05-30T20:09:36.878Z",
+  "updatedAt": "2026-05-30T20:32:20.896Z",
   "summary": {
     "name": "Lillith",
-    "armorClass": "",
-    "hpCurrent": "",
-    "hpMax": "",
-    "passivePerception": "",
+    "armorClass": "15",
+    "hpCurrent": "9",
+    "hpMax": "9",
+    "passivePerception": "14",
     "currentConditions": ""
   },
   "fields": [
@@ -40,7 +40,7 @@
     },
     {
       "index": 7,
-      "value": ""
+      "value": "+3"
     },
     {
       "index": 8,
@@ -48,15 +48,15 @@
     },
     {
       "index": 9,
-      "value": ""
+      "value": "15"
     },
     {
       "index": 10,
-      "value": ""
+      "value": "9"
     },
     {
       "index": 11,
-      "value": ""
+      "value": "9"
     },
     {
       "index": 12,
@@ -72,19 +72,19 @@
     },
     {
       "index": 15,
-      "value": ""
+      "value": "14"
     },
     {
       "index": 16,
-      "value": ""
+      "value": "+0"
     },
     {
       "index": 17,
-      "value": ""
+      "value": "10"
     },
     {
       "index": 18,
-      "value": ""
+      "value": "+0"
     },
     {
       "index": 19,
@@ -92,131 +92,131 @@
     },
     {
       "index": 20,
-      "value": ""
+      "value": "+3"
     },
     {
       "index": 21,
-      "value": ""
+      "value": "16"
     },
     {
       "index": 22,
-      "value": ""
+      "value": "+3"
     },
     {
       "index": 23,
-      "value": ""
+      "value": "+3"
     },
     {
       "index": 24,
-      "value": ""
+      "value": "+3"
     },
     {
       "index": 25,
-      "value": ""
+      "value": "+3"
     },
     {
       "index": 26,
-      "value": ""
+      "value": "+1"
     },
     {
       "index": 27,
-      "value": ""
+      "value": "13"
     },
     {
       "index": 28,
-      "value": ""
+      "value": "+1"
     },
     {
       "index": 29,
-      "value": ""
+      "value": "-1"
     },
     {
       "index": 30,
-      "value": ""
+      "value": "8"
     },
     {
       "index": 31,
-      "value": ""
+      "value": "-1"
     },
     {
       "index": 32,
-      "value": ""
+      "value": "+1"
     },
     {
       "index": 33,
-      "value": ""
+      "value": "-1"
     },
     {
       "index": 34,
-      "value": ""
+      "value": "-1"
     },
     {
       "index": 35,
-      "value": ""
+      "value": "-1"
     },
     {
       "index": 36,
-      "value": ""
+      "value": "+1"
     },
     {
       "index": 37,
-      "value": ""
+      "value": "+2"
     },
     {
       "index": 38,
-      "value": ""
+      "value": "15"
     },
     {
       "index": 39,
-      "value": ""
+      "value": "+4"
     },
     {
       "index": 40,
-      "value": ""
+      "value": "+2"
     },
     {
       "index": 41,
-      "value": ""
+      "value": "+4"
     },
     {
       "index": 42,
-      "value": ""
+      "value": "+2"
     },
     {
       "index": 43,
-      "value": ""
+      "value": "+4"
     },
     {
       "index": 44,
-      "value": ""
+      "value": "+2"
     },
     {
       "index": 45,
-      "value": ""
+      "value": "+1"
     },
     {
       "index": 46,
-      "value": ""
+      "value": "15"
     },
     {
       "index": 47,
-      "value": ""
+      "value": "+3"
     },
     {
       "index": 48,
-      "value": ""
+      "value": "+1"
     },
     {
       "index": 49,
-      "value": ""
+      "value": "+1"
     },
     {
       "index": 50,
-      "value": ""
+      "value": "+1"
     },
     {
       "index": 51,
-      "value": ""
+      "value": "+3"
     },
     {
       "index": 52,
@@ -312,7 +312,7 @@
     },
     {
       "index": 75,
-      "value": "Slightly below average height, lean, too long white hair, deep dark purple/black eyes, wearing a scrambled together ensamble of cloth leather and blade. "
+      "value": "Slightly below average height, lean, too long white hair, deep dark purple/black eyes, wearing a scrambled together ensamble of cloth leather and blade. \n\nLillith carries a dark iron spear shaped like a harpoon, its haft wrapped in salt-stained leather and threaded with small shells, broken beads, and scraps of sea-worn bone."
     },
     {
       "index": 76,
@@ -382,32 +382,26 @@
         "open": false
       },
       {
-        "name": "Species Trait",
-        "short": "Short summary of what this trait does.",
+        "name": "Dark Vision",
+        "short": "60 ft",
         "resource": "",
         "details": "",
         "open": false
       },
       {
-        "name": "Feat",
-        "short": "Short summary of what this feat does.",
-        "resource": "",
+        "name": "Advantage to charmed",
+        "short": "A To avoid or end charmed condition ",
+        "resource": "Fey Ancestry",
         "details": "",
         "open": false
       }
     ],
     "weapons": [
       {
-        "name": "Cutlass",
-        "atk": "+5",
-        "damage": "1d6+3 slashing",
-        "notes": "Finesse"
-      },
-      {
-        "name": "",
-        "atk": "",
-        "damage": "",
-        "notes": ""
+        "name": "Spear",
+        "atk": "+2",
+        "damage": "1d6  /  1d8 (piercing)",
+        "notes": "20ft/60ft,  Sap: If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn. "
       },
       {
         "name": "",
