@@ -2,13 +2,13 @@
   {
     "id": "daff594f-ebc2-4181-b841-2deaff7791d8",
     "name": "Lillith",
-    "armorClass": "",
-    "hpCurrent": "",
-    "hpMax": "",
-    "passivePerception": "",
+    "armorClass": "15",
+    "hpCurrent": "9",
+    "hpMax": "9",
+    "passivePerception": "14",
     "currentConditions": "",
     "file": "characters/daff594f-ebc2-4181-b841-2deaff7791d8.json",
-    "updatedAt": "2026-05-30T20:09:36.878Z"
+    "updatedAt": "2026-05-30T20:32:20.896Z"
   },
   {
     "id": "075e36bd-fc2a-43d3-b052-24174388c79b",
