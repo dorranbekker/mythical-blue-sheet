@@ -1,8 +1,8 @@
 {
   "id": "075e36bd-fc2a-43d3-b052-24174388c79b",
-  "updatedAt": "2026-05-30T17:43:37.694Z",
+  "updatedAt": "2026-05-30T18:34:34.251Z",
   "summary": {
-    "name": "Lillith",
+    "name": "Lillith 2",
     "armorClass": "",
     "hpCurrent": "",
     "hpMax": "",
@@ -12,7 +12,7 @@
   "fields": [
     {
       "index": 0,
-      "value": "Lillith"
+      "value": "Lillith 2"
     },
     {
       "index": 1,
