@@ -1,6 +1,6 @@
 {
   "id": "075e36bd-fc2a-43d3-b052-24174388c79b",
-  "updatedAt": "2026-05-29T08:52:50.944Z",
+  "updatedAt": "2026-05-30T17:41:40.655Z",
   "summary": {
     "name": "Mara ",
     "armorClass": "",
@@ -327,6 +327,51 @@
       "value": ""
     }
   ],
+  "uiState": {
+    "inspiration": false,
+    "skillProficiencies": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "deathSaves": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "exhaustion": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
   "customLists": {
     "feats": [
       {
