@@ -4,29 +4,72 @@ exports.handler = async () => {
     const repo = process.env.GITHUB_REPO;
     const branch = process.env.GITHUB_BRANCH || "main";
 
-    const response = await fetch(
-      `https://api.github.com/repos/${repo}/contents/characters/character-index.json?ref=${branch}&t=${Date.now()}`,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          Accept: "application/vnd.github+json",
-          "Cache-Control": "no-cache"
-        }
-      }
+    const headers = {
+      Authorization: `Bearer ${token}`,
+      Accept: "application/vnd.github+json",
+      "Cache-Control": "no-cache"
+    };
+
+    const folderResponse = await fetch(
+      `https://api.github.com/repos/${repo}/contents/characters?ref=${branch}&t=${Date.now()}`,
+      { headers }
     );
 
-    if (!response.ok) {
+    if (!folderResponse.ok) {
       return {
-        statusCode: response.status,
+        statusCode: folderResponse.status,
         headers: { "Cache-Control": "no-store" },
-        body: JSON.stringify({ error: await response.text() })
+        body: JSON.stringify({
+          error: await folderResponse.text()
+        })
       };
     }
 
-    const file = await response.json();
-    const index = JSON.parse(
-      Buffer.from(file.content, "base64").toString("utf8")
+    const files = await folderResponse.json();
+
+    const characterFiles = files.filter(file =>
+      file.type === "file" &&
+      file.name.endsWith(".json") &&
+      file.name !== "character-index.json"
     );
+
+    const characters = await Promise.all(
+      characterFiles.map(async file => {
+        const response = await fetch(
+          `https://api.github.com/repos/${repo}/contents/${file.path}?ref=${branch}&t=${Date.now()}`,
+          { headers }
+        );
+
+        if (!response.ok) {
+          console.error(`Could not load ${file.path}`);
+          return null;
+        }
+
+        const githubFile = await response.json();
+
+        const character = JSON.parse(
+          Buffer.from(githubFile.content, "base64").toString("utf8")
+        );
+
+        return {
+          id: character.id,
+          name: character.summary?.name || "Unnamed Character",
+          armorClass: character.summary?.armorClass || "",
+          hpCurrent: character.summary?.hpCurrent || "",
+          hpMax: character.summary?.hpMax || "",
+          passivePerception: character.summary?.passivePerception || "",
+          currentConditions: character.summary?.currentConditions || "",
+          file: file.path,
+          updatedAt: character.updatedAt || ""
+        };
+      })
+    );
+
+    const validCharacters = characters
+      .filter(Boolean)
+      .sort((a, b) => {
+        return new Date(b.updatedAt || 0) - new Date(a.updatedAt || 0);
+      });
 
     return {
       statusCode: 200,
@@ -34,13 +77,18 @@ exports.handler = async () => {
         "Content-Type": "application/json",
         "Cache-Control": "no-store"
       },
-      body: JSON.stringify(index)
+      body: JSON.stringify(validCharacters)
     };
   } catch (error) {
     return {
       statusCode: 500,
-      headers: { "Cache-Control": "no-store" },
-      body: JSON.stringify({ error: error.message })
+      headers: {
+        "Content-Type": "application/json",
+        "Cache-Control": "no-store"
+      },
+      body: JSON.stringify({
+        error: error.message
+      })
     };
   }
 };
