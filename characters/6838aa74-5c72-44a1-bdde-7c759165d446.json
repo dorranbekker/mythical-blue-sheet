@@ -1,6 +1,6 @@
 {
   "id": "6838aa74-5c72-44a1-bdde-7c759165d446",
-  "updatedAt": "2026-05-30T18:30:02.930Z",
+  "updatedAt": "2026-05-30T18:30:08.301Z",
   "summary": {
     "name": "Lillith",
     "armorClass": "",
@@ -20,7 +20,7 @@
     },
     {
       "index": 2,
-      "value": "Cleric (Level 1)"
+      "value": ""
     },
     {
       "index": 3,
@@ -32,11 +32,11 @@
     },
     {
       "index": 5,
-      "value": "Primordial Nautic Domain"
+      "value": ""
     },
     {
       "index": 6,
-      "value": "Chaotic Neutral"
+      "value": "Neutral / Morally Grey"
     },
     {
       "index": 7,
