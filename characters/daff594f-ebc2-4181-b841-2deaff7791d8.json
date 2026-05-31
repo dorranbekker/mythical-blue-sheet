@@ -1,26 +1,26 @@
 {
   "id": "daff594f-ebc2-4181-b841-2deaff7791d8",
-  "updatedAt": "2026-05-31T08:27:03.686Z",
+  "updatedAt": "2026-05-31T08:30:37.116Z",
   "summary": {
-    "name": "Lillith",
-    "armorClass": "15",
-    "hpCurrent": "9",
-    "hpMax": "9",
-    "passivePerception": "14",
+    "name": "Nimue",
+    "armorClass": "13",
+    "hpCurrent": "8",
+    "hpMax": "8",
+    "passivePerception": "11",
     "currentConditions": ""
   },
   "fields": [
     {
       "index": 0,
-      "value": "Lillith"
+      "value": "Nimue"
     },
     {
       "index": 1,
-      "value": "Courier"
+      "value": "Golden Goose"
     },
     {
       "index": 2,
-      "value": "Cleric"
+      "value": "Sorcerer 1"
     },
     {
       "index": 3,
@@ -28,15 +28,15 @@
     },
     {
       "index": 4,
-      "value": "Drow"
+      "value": "Aeternian"
     },
     {
       "index": 5,
-      "value": "Primordial Nautic Domain"
+      "value": "Thalassic"
     },
     {
       "index": 6,
-      "value": "Chaotic Neutral"
+      "value": ""
     },
     {
       "index": 7,
@@ -44,23 +44,23 @@
     },
     {
       "index": 8,
-      "value": ""
+      "value": "30"
     },
     {
       "index": 9,
-      "value": "15"
+      "value": "13"
     },
     {
       "index": 10,
-      "value": "9"
+      "value": "8"
     },
     {
       "index": 11,
-      "value": "9"
+      "value": "8"
     },
     {
       "index": 12,
-      "value": ""
+      "value": "1d6"
     },
     {
       "index": 13,
@@ -68,11 +68,11 @@
     },
     {
       "index": 14,
-      "value": ""
+      "value": "2"
     },
     {
       "index": 15,
-      "value": "14"
+      "value": "11"
     },
     {
       "index": 16,
@@ -88,7 +88,7 @@
     },
     {
       "index": 19,
-      "value": ""
+      "value": "+0"
     },
     {
       "index": 20,
@@ -116,111 +116,111 @@
     },
     {
       "index": 26,
-      "value": "+1"
+      "value": "+2"
     },
     {
       "index": 27,
-      "value": "13"
+      "value": "14"
     },
     {
       "index": 28,
-      "value": "+1"
+      "value": "+4"
     },
     {
       "index": 29,
-      "value": "-1"
+      "value": "+2"
     },
     {
       "index": 30,
-      "value": "8"
+      "value": "14"
     },
     {
       "index": 31,
-      "value": "-1"
+      "value": "+2"
     },
     {
       "index": 32,
-      "value": "+1"
+      "value": "+4"
     },
     {
       "index": 33,
-      "value": "-1"
+      "value": "+2"
     },
     {
       "index": 34,
-      "value": "-1"
+      "value": "+2"
     },
     {
       "index": 35,
-      "value": "-1"
+      "value": "+2"
     },
     {
       "index": 36,
-      "value": "+1"
+      "value": "+2"
     },
     {
       "index": 37,
-      "value": "+2"
+      "value": "+1"
     },
     {
       "index": 38,
-      "value": "15"
+      "value": "13"
     },
     {
       "index": 39,
-      "value": "+4"
+      "value": "+1"
     },
     {
       "index": 40,
-      "value": "+2"
+      "value": "+1"
     },
     {
       "index": 41,
-      "value": "+4"
+      "value": "+1"
     },
     {
       "index": 42,
-      "value": "+2"
+      "value": "+1"
     },
     {
       "index": 43,
-      "value": "+4"
+      "value": "+1"
     },
     {
       "index": 44,
-      "value": "+2"
+      "value": "+1"
     },
     {
       "index": 45,
-      "value": "+1"
+      "value": "+4"
     },
     {
       "index": 46,
-      "value": "15"
+      "value": "18"
     },
     {
       "index": 47,
-      "value": "+3"
+      "value": "+6"
     },
     {
       "index": 48,
-      "value": "+1"
+      "value": "+6"
     },
     {
       "index": 49,
-      "value": "+1"
+      "value": "+4"
     },
     {
       "index": 50,
-      "value": "+1"
+      "value": "+6"
     },
     {
       "index": 51,
-      "value": "+3"
+      "value": "+6"
     },
     {
       "index": 52,
-      "value": ""
+      "value": "Darkvision: 60ft\nSpeed: 30ft Swimming\nWeapons: Simple\nTools: Calligrapher's Supplies"
     },
     {
       "index": 53,
@@ -244,7 +244,7 @@
     },
     {
       "index": 58,
-      "value": ""
+      "value": "28"
     },
     {
       "index": 59,
@@ -252,23 +252,23 @@
     },
     {
       "index": 60,
-      "value": ""
+      "value": "Calligrapher's Supplies\nFine Clothes\nBook about Thalassic Mythology\nArcane Focus (crystal)\nDungeoneer's Pack"
     },
     {
       "index": 61,
-      "value": "Modifyer +2"
+      "value": "cha"
     },
     {
       "index": 62,
-      "value": "12"
+      "value": "14"
     },
     {
       "index": 63,
-      "value": "+4"
+      "value": "+6"
     },
     {
       "index": 64,
-      "value": ""
+      "value": "2/2"
     },
     {
       "index": 65,
@@ -304,19 +304,19 @@
     },
     {
       "index": 73,
-      "value": "Lillith was born beneath Halsperia, in the Undershadows, as a daughter of a powerful drow house. Her mother, the Matron, ruled with the kind of authority that did not need to raise its voice. Within their halls, men were tools, daughters were weapons, and affection was only tolerated when it could be turned into leverage.\n\nFrom a young age, Lillith was taught that survival belonged to those willing to strike first. She learned courtly cruelty, silent observation, poisoned politeness, and the value of a bargain that left the other person smiling while bleeding. She was not poor at these lessons. That was the problem. Her mother saw promise in her and began preparing her for a higher role within the house.\n\nFor a time, Lillith believed this was strength.\n\nThe breaking point came when her mother’s schemes required a sacrifice. A man loyal to the house, whether kin, guard, servant, or consort, was accused of treachery to cover a failure that belonged to someone far above him. His guilt did not matter. His usefulness had ended. Lillith was expected to stand beside her mother, affirm the lie, and prove that she understood what power demanded.\n\nInstead, she saw the rot beneath it.\n\nThe cruelty of her people no longer looked like dominance. It looked like fear dressed in silk. Every alliance was temporary. Every family bond was a blade held close to the throat. Every victory only fed the next betrayal. Lillith did not suddenly become merciful, but she understood then that she did not admire them. She only knew how to survive them.\n\nSo she severed herself from the house.\n\nShe left without permission, without blessing, and without any illusion that she would be forgiven. In the world above, her name and nature closed many doors, but Lillith had been raised among worse things than suspicion. She travelled through Halsperia, crossed seas, and eventually forged a route toward Aeternia, carrying goods, letters, secrets, and favours between people who had no reason to trust one another.\n\nOver the years, she became a seasoned courier, trader, smuggler, and occasional adventurer. She learned to haggle her way out of bad bargains, sneer through insults, and keep unlikely allies alive just long enough for them to become useful again. The road gave her distance. The sea gave her silence.\n\nIt was there, far from the Undershadows, that Lillith found Thalassa.\n\nNot as a gentle goddess. Not as salvation. But as a dead mother whose body became the world. A symbol of violent rebirth. A mother betrayed, broken, and remade into the world itself.  A primordial force betrayed, broken, and remade into life itself. To Lillith, Thalassa was everything her own mother was not: vast instead of possessive, chaotic instead of controlled, generative even in death.\n\nLillith’s devotion began as defiance. If blood had chained her to one mother, faith would bind her to another by choice. Through Thalassa, she seeks to drown the inheritance of her house, bury the girl her mother raised, and be remade into something no matron, bloodline, or underworld throne can claim.\n\nShe does not know whether Thalassa offers forgiveness.\n\nBut she believes the sea knows how to swallow a corpse.\n\n"
+      "value": ""
     },
     {
       "index": 74,
-      "value": "Lillith serves her own interest first, but she is not foolish enough to waste a useful alliance. She was raised in a world where survival belonged to the ruthless, and that instinct has not left her. She respects sharp minds, blunt words, dry humour, and people who can hold their liquor without becoming sentimental.\n\nShe is sarcastic and difficult to impress. Her trust is rarely given freely, but once someone has proven useful, loyal, or strangely tolerable, she is more protective than she would ever admit.\n\nIdeal:\nFreedom. Lillith wants enough coin to leave the delivery business behind, buy a ship, and vanish beyond the mapped world. No matron. No house. No throne. No leash.\n\nBond:\nLillith is devoted to Thalassa, the primordial goddess of life, water, and chaos. She sees her faith as a way to kill the past without denying that it shaped her. If her first mother made her into a weapon, Thalassa offers the possibility of being remade into something living.\n\nFlaw:\nLillith often mistakes emotional distance for strength. She assumes every bond will eventually become a transaction, a weakness, or a trap, and may push people away before they can prove otherwise."
+      "value": ""
     },
     {
       "index": 75,
-      "value": "Slightly below average height, lean, too long white hair, deep dark purple/black eyes, wearing a scrambled together ensamble of cloth leather and blade. \n\nLillith carries a dark iron spear shaped like a harpoon, its haft wrapped in salt-stained leather and threaded with small shells, broken beads, and scraps of sea-worn bone."
+      "value": "Average, Violet Eyes, Blue Hair"
     },
     {
       "index": 76,
-      "value": ""
+      "value": "Common\nAequor\n"
     },
     {
       "index": 77,
@@ -324,11 +324,11 @@
     },
     {
       "index": 78,
-      "value": ""
+      "value": "Spear, 2 Daggers, Backpack, Caltrops, Crowbar, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin."
     }
   ],
   "uiState": {
-    "inspiration": false,
+    "inspiration": true,
     "skillProficiencies": [
       false,
       false,
@@ -336,6 +336,9 @@
       false,
       false,
       false,
+      true,
+      false,
+      true,
       false,
       false,
       false,
@@ -346,14 +349,11 @@
       false,
       false,
       false,
+      true,
+      true,
       false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false
+      true,
+      true
     ],
     "deathSaves": [
       false,
@@ -375,33 +375,94 @@
   "customLists": {
     "feats": [
       {
-        "name": "Class Feature",
-        "short": "Short summary of what this feature does.",
-        "resource": "1/1 Short Rest",
-        "details": "",
-        "open": false
-      },
-      {
-        "name": "Dark Vision",
-        "short": "60 ft",
+        "name": "Goose: Golden Egg",
+        "short": "Give inspiration at critical hit. ",
         "resource": "",
-        "details": "",
+        "details": "Whenever you make a critical hit, you can take or give a heroic inspiration. Giving can only be done to allies within 30 ft of you.",
         "open": false
       },
       {
-        "name": "Advantage to charmed",
-        "short": "A To avoid or end charmed condition ",
-        "resource": "Fey Ancestry",
-        "details": "",
+        "name": "Goose: Corrupted Egg",
+        "short": "At 1/2 health, DC15 dex save or 2d8 force and 10ft push.",
+        "resource": "1/1 Long Rest",
+        "details": "When you are equal to or below 1/2th of health, you explode in frustration. Unleashing a burst of energy with a 15 ft radius around you (once per long rest). Those within your vicinity (allies and enemies alike) will need to make a dexterity saving throw (DC 15). Upon failure, they’ll be pushed 10 ft away and take 2D8 force damage. Upon a successful save, they’ll only take half the damage.",
+        "open": false
+      },
+      {
+        "name": "Amphibious",
+        "short": "Ability to breathe and move above and below water.",
+        "resource": "",
+        "details": "Aeternians have grown gills, webbing between their phalanges, and translucent pearl-like scales which become  \nvisible underwater; allowing them to breathe and swim underwater no different than on land.  ",
+        "open": false
+      },
+      {
+        "name": "Cold Climate Adept",
+        "short": "Unbothered by cold climate.",
+        "resource": "",
+        "details": "Aeternians have adapted to the cold of the deep, allowing them to become unbothered by cold climate  \ntemperatures, though they may require more hydration in warmer climates.  ",
+        "open": false
+      },
+      {
+        "name": "Bioluminescence",
+        "short": "5/15ft of emitting dim light in natural darkness.",
+        "resource": "",
+        "details": "Before the Aeternians had discovered how to light their underwater Queendom, they themselves emitted light  in darkness through bioluminescence.  \n\nWhen in natural darkness, the scales of the Aeternians softly exude a dim light. On land their scales are less  on the surface of their skin; therefore they only emit dim light for 5 ft, while underwater their scales surface,  due to which the Aeternians’ bioluminescence is strengthened to emitting dim light for 15 ft. The  bioluminescence does not shine within magical darkness.  \n\nThe bioluminescence effect comes from releasing the stored light within the scales of the Aeternian.  \nGenerally, 6–8 hours of exposure to a light source is required to store enough light to generate the effect.  As such, in covert situations, Aeternians who do not wish to shed light will ensure to either not be exposed  to a light source, or to fully cover themselves. However, the lack of natural light is regarded as an indication  of shady business; an Aeternian who does not emit bioluminescence is commonly viewed with suspicion  \nby others of their kin. ",
+        "open": false
+      },
+      {
+        "name": "Aquatic Affiliation",
+        "short": "Adept at handling aquatic beasts.",
+        "resource": "",
+        "details": "Due to centuries of living below the water surface, the Aeternians have become adept in communing and  handling aquatic beasts.  ",
+        "open": false
+      },
+      {
+        "name": "Siren's Call",
+        "short": "Can cast Siren's Call equal to proficiency bonus.",
+        "resource": "2/2 Long Rest",
+        "details": "The geographical change of the Aeternia Queendom came with new forms of danger. However, due to their  brilliant minds and abundant forms of art, they quickly became connected to the Sirens, a species that are  natural denizens of the sea.  \n\nThrough them they learned the Siren's Call, a method to warn others while forcing their assailants to move  away from them. They can cast this spell of warding a number of times equal to their proficiency bonus  per long rest.  \n\nIntelligence, Wisdom, or Charisma is their spellcasting ability for this trait (choose when you select this race). -> Charisma",
+        "open": false
+      },
+      {
+        "name": "Versatile: Cleric Initiate",
+        "short": "Guidance & Spare the Dying, Healing Word.",
+        "resource": "1/1 Long Rest",
+        "details": "Aeternians are as versatile as their surface-born counterparts: humans. Depending on their origin they gain  a matching feat (gain an Origin feat of choice). -> Cleric Initiate\n\nTwo Cantrips. You learn two cantrips of your choice from the Cleric, Druid, or Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat's spells (choose when you select this feat). -> Charisma; Guidance & Spare the Dying\n\nLevel 1 Spell. Choose a level 1 spell from the same list you selected for this feat's cantrips. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have. -> Healing Word\n\nSpell Change. Whenever you gain a new level, you can replace one of the spells you chose for this feat with a different spell of the same level from the chosen spell list.\n\nRepeatable. You can take this feat more than once, but you must choose a different spell list each time.",
+        "open": false
+      },
+      {
+        "name": "Resourceful",
+        "short": "Gain Heroic Inspiration at Long Rest.",
+        "resource": "1/1 Long Rest",
+        "details": "Similar to their surface-born counterparts (humans), Aeternians gain Heroic Inspiration whenever they finish  a Long Rest.",
+        "open": false
+      },
+      {
+        "name": "Innate Sorcery",
+        "short": "Spell save DC +1 and advantage on attack rolls.",
+        "resource": "2/2 Long Rest",
+        "details": "An event in your past left an indelible mark on you, infusing you with simmering magic. As a Bonus Action, you can unleash that magic for 1 minute, during which you gain the following benefits:\n\nThe spell save DC of your Sorcerer spells increases by 1.\nYou have Advantage on the attack rolls of Sorcerer spells you cast.\nYou can use this feature twice, and you regain all expended uses of it when you finish a Long Rest.",
         "open": false
       }
     ],
     "weapons": [
       {
+        "name": "Dagger",
+        "atk": "+5",
+        "damage": "1d4+3 piercing",
+        "notes": "Finesse, Light, Thrown (Range 20/60)"
+      },
+      {
         "name": "Spear",
         "atk": "+2",
-        "damage": "1d6  /  1d8 (piercing)",
-        "notes": "20ft/60ft,  Sap: If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn. "
+        "damage": "1d6 piercing",
+        "notes": "Thrown (Range 20/60), Versatile (1d8)"
+      },
+      {
+        "name": "",
+        "atk": "",
+        "damage": "",
+        "notes": ""
       },
       {
         "name": "",
@@ -425,9 +486,33 @@
     "spells": [
       {
         "level": "C",
-        "name": "Mage Hand",
-        "castTime": "1 action",
-        "range": "30 ft",
+        "name": "Guidance",
+        "castTime": "Action",
+        "range": "Touch",
+        "concentration": true,
+        "ritual": false,
+        "material": false,
+        "effect": "1d4 to any ability check for 1 min",
+        "details": "Divination Cantrip (Artificer, Cleric, Druid)\n\nCasting Time: Action\nRange: Touch\nComponents: V, S\nDuration: Concentration, up to 1 minute\n\nYou touch a willing creature and choose a skill. Until the spell ends, the creature adds 1d4 to any ability check using the chosen skill.",
+        "open": false
+      },
+      {
+        "level": "C",
+        "name": "Spare the Dying",
+        "castTime": "Action",
+        "range": "15 ft",
+        "concentration": false,
+        "ritual": false,
+        "material": false,
+        "effect": "A creature with 0 hit points becomes stable",
+        "details": "Necromancy Cantrip (Artificer, Cleric, Druid)\n\nCasting Time: Action\nRange: 15 feet\nComponents: V, S\nDuration: Instantaneous\n\nChoose a creature within range that has 0 Hit Points and isn’t dead. The creature becomes Stable.\n\nCantrip Upgrade. The range doubles when you reach levels 5 (30 feet), 11 (60 feet), and 17 (120 feet).",
+        "open": false
+      },
+      {
+        "level": "C",
+        "name": "",
+        "castTime": "",
+        "range": "",
         "concentration": false,
         "ritual": false,
         "material": false,
@@ -437,10 +522,34 @@
       },
       {
         "level": "C",
-        "name": "Control Water",
-        "castTime": "1 action",
-        "range": "300 ft",
-        "concentration": true,
+        "name": "",
+        "castTime": "",
+        "range": "",
+        "concentration": false,
+        "ritual": false,
+        "material": false,
+        "effect": "",
+        "details": "",
+        "open": false
+      },
+      {
+        "level": "C",
+        "name": "",
+        "castTime": "",
+        "range": "",
+        "concentration": false,
+        "ritual": false,
+        "material": false,
+        "effect": "",
+        "details": "",
+        "open": false
+      },
+      {
+        "level": "C",
+        "name": "",
+        "castTime": "",
+        "range": "",
+        "concentration": false,
         "ritual": false,
         "material": false,
         "effect": "",
@@ -449,42 +558,18 @@
       },
       {
         "level": "1",
-        "name": "Fog Cloud",
-        "castTime": "1 action",
-        "range": "120 ft",
-        "concentration": true,
-        "ritual": false,
-        "material": false,
-        "effect": "",
-        "details": "",
-        "open": false
-      },
-      {
-        "level": "2",
-        "name": "Misty Step",
-        "castTime": "Bonus",
-        "range": "Self",
+        "name": "Healing Word",
+        "castTime": "Bonus Action",
+        "range": "60 ft",
         "concentration": false,
         "ritual": false,
         "material": false,
-        "effect": "",
-        "details": "",
+        "effect": "2d4+4 healing",
+        "details": "Level 1 Abjuration (Bard, Cleric, Druid)\n\nCasting Time: Bonus Action\nRange: 60 feet\nComponents: V\nDuration: Instantaneous\n\nA creature of your choice that you can see within range regains Hit Points equal to 2d4 plus your spellcasting ability modifier.\n\nUsing a Higher-Level Spell Slot. The healing increases by 2d4 for each spell slot level above 1.",
         "open": false
       },
       {
-        "level": "3",
-        "name": "Call Lightning",
-        "castTime": "1 action",
-        "range": "120 ft",
-        "concentration": true,
-        "ritual": false,
-        "material": false,
-        "effect": "",
-        "details": "",
-        "open": false
-      },
-      {
-        "level": "",
+        "level": "1",
         "name": "",
         "castTime": "",
         "range": "",
@@ -496,31 +581,7 @@
         "open": false
       },
       {
-        "level": "",
-        "name": "",
-        "castTime": "",
-        "range": "",
-        "concentration": false,
-        "ritual": false,
-        "material": false,
-        "effect": "",
-        "details": "",
-        "open": false
-      },
-      {
-        "level": "",
-        "name": "",
-        "castTime": "",
-        "range": "",
-        "concentration": false,
-        "ritual": false,
-        "material": false,
-        "effect": "",
-        "details": "",
-        "open": false
-      },
-      {
-        "level": "",
+        "level": "1",
         "name": "",
         "castTime": "",
         "range": "",
