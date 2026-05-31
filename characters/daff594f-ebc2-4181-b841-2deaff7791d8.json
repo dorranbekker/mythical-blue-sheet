@@ -1,6 +1,6 @@
 {
   "id": "daff594f-ebc2-4181-b841-2deaff7791d8",
-  "updatedAt": "2026-05-31T08:30:37.116Z",
+  "updatedAt": "2026-05-31T08:45:40.525Z",
   "summary": {
     "name": "Nimue",
     "armorClass": "13",
@@ -312,7 +312,7 @@
     },
     {
       "index": 75,
-      "value": "Average, Violet Eyes, Blue Hair"
+      "value": "Average Height, Violet Eyes, Blue Hair"
     },
     {
       "index": 76,
@@ -558,6 +558,30 @@
       },
       {
         "level": "1",
+        "name": "Bubble Spray",
+        "castTime": "Action",
+        "range": "Self",
+        "concentration": false,
+        "ritual": false,
+        "material": true,
+        "effect": "Wis save; cone of 1d6 psychic damage and blinded",
+        "details": "Spell Level: 1st\nCasting Time: 1 Action\nRange/Area: Self — 15 ft. cone\nComponents: V, S, M*\n*A small ring\n\nDuration: Instantaneous\nSchool: Evocation\nAttack/Save: Wisdom Save\nDamage/Effect: Psychic\n\nDescription\nYou spray a dazzling collection of mystifying bubbles from your hands. Each creature in a 15 ft. cone, originating from you, must succeed on a Wisdom saving throw or become blinded until the end of your next turn. In addition, upon a failed save, the creatures take 1d6 Psychic damage, or half as much on a successful save.\n\nNatural fires within the cone will be extinguished.\n\nHigher-Level Spell Slot\nThe damage increases by 1d6 for each spell slot level above 1.",
+        "open": false
+      },
+      {
+        "level": "1",
+        "name": "Whirlpool",
+        "castTime": "Action",
+        "range": "90 ft",
+        "concentration": false,
+        "ritual": false,
+        "material": true,
+        "effect": "Dex save; 3d8/3d10 cold damage and target falls prone/is pushed downward",
+        "details": "Spell Level: 1st\nCasting Time: 1 Action\nRange/Area: 90 ft. — 5 ft. square\nComponents: S, M*\n*A small vial of water\n\nDuration: Instantaneous\nSchool: Conjuration\nAttack/Save: Dexterity Save\nDamage/Effect: Cold & Control\n\nDescription\nAs you spin around your vial of water, a whirlpool comes to be. Uncorking the vial will release said whirlpool upon a target within range (90 ft.). The target must make a Dexterity saving throw or experience the full effect of the spell. The effect of the spell differs depending on whether the target is on the surface or below it:\n\nOn Land\nThe target takes 3d8 cold damage and falls prone. On a successful save, the target takes half the damage and does not fall prone.\n\nUnder Water\nThe target takes 3d10 cold damage and is pushed downward by 30 ft. On a successful save, the target takes half the damage and is not pushed downward.\n\nHigher-Level Spell Slot\nFor each spell slot above level 1, an extra whirlpool is created. ",
+        "open": false
+      },
+      {
+        "level": "1",
         "name": "Healing Word",
         "castTime": "Bonus Action",
         "range": "60 ft",
@@ -566,30 +590,6 @@
         "material": false,
         "effect": "2d4+4 healing",
         "details": "Level 1 Abjuration (Bard, Cleric, Druid)\n\nCasting Time: Bonus Action\nRange: 60 feet\nComponents: V\nDuration: Instantaneous\n\nA creature of your choice that you can see within range regains Hit Points equal to 2d4 plus your spellcasting ability modifier.\n\nUsing a Higher-Level Spell Slot. The healing increases by 2d4 for each spell slot level above 1.",
-        "open": false
-      },
-      {
-        "level": "1",
-        "name": "",
-        "castTime": "",
-        "range": "",
-        "concentration": false,
-        "ritual": false,
-        "material": false,
-        "effect": "",
-        "details": "",
-        "open": false
-      },
-      {
-        "level": "1",
-        "name": "",
-        "castTime": "",
-        "range": "",
-        "concentration": false,
-        "ritual": false,
-        "material": false,
-        "effect": "",
-        "details": "",
         "open": false
       }
     ]
