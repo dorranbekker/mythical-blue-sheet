@@ -1,6 +1,6 @@
 {
   "id": "f7399244-4d80-4b0d-9dd1-c2d4ea53d26a",
-  "updatedAt": "2026-05-31T09:47:58.157818Z",
+  "updatedAt": "2026-05-31T17:25:06.439Z",
   "summary": {
     "name": "Mara Flint",
     "armorClass": "",
@@ -44,7 +44,7 @@
     },
     {
       "index": 8,
-      "value": ""
+      "value": "30"
     },
     {
       "index": 9,
@@ -68,7 +68,7 @@
     },
     {
       "index": 14,
-      "value": ""
+      "value": "+2"
     },
     {
       "index": 15,
@@ -220,7 +220,7 @@
     },
     {
       "index": 52,
-      "value": ""
+      "value": "Darkvision: 60 ft.\nSpeed (Walking): 30 ft.\nSpeed (Swimming): 20–40 ft."
     },
     {
       "index": 53,
@@ -375,17 +375,17 @@
   "customLists": {
     "feats": [
       {
-        "name": "Class Feature",
-        "short": "Short summary of what this feature does.",
-        "resource": "1/1 Short Rest",
-        "details": "",
+        "name": "Natural Blubber",
+        "short": "Cold Resistance",
+        "resource": "",
+        "details": "As the Selkie became one with their seal friends, they adapted to the chilling cold of the water by adopting a thin layer of natural blubber below their skin, granting them resistance to cold damage.",
         "open": false
       },
       {
-        "name": "Species Trait",
-        "short": "Short summary of what this trait does.",
+        "name": "Friend of Fauna",
+        "short": "Able to speak to all animals",
         "resource": "",
-        "details": "",
+        "details": "The Selkie are fey that are naturally friendly towards animals. Although they’ve bonded specifically with seals, they are innately able to speak with all animals.",
         "open": false
       },
       {
