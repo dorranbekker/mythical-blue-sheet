@@ -215,8 +215,142 @@ background-position: top center;
   font-size: 14px;
 }
 
-.hstat.conditions input {
+.hstat.conditions {
   min-width: 180px;
+  align-items: stretch;
+}
+
+.hstat.conditions label {
+  text-align: center;
+}
+
+.condition-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 180px;
+  min-height: 46px;
+  border: 1.5px solid var(--gold);
+  border-radius: var(--r);
+  background: rgba(255,253,245,.4);
+  color: var(--navy-deep);
+  overflow: hidden;
+}
+
+.condition-control:focus-within {
+  border-color: var(--gold-deep);
+  box-shadow: 0 0 0 1px rgba(184,144,44,.18);
+}
+
+.condition-display {
+  position: absolute;
+  inset: 0 30px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(28,39,80,.75);
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: 14px;
+  font-style: italic;
+  pointer-events: none;
+}
+
+.condition-chevron {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid var(--navy-deep);
+  border-bottom: 1.5px solid var(--navy-deep);
+  pointer-events: none;
+  transform: translateY(-70%) rotate(45deg);
+}
+
+.condition-picker {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.condition-chips {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  min-height: 44px;
+  padding: 5px 34px 5px 8px;
+  pointer-events: none;
+}
+
+.condition-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  pointer-events: auto;
+  border: 1px solid var(--gold-deep);
+  border-radius: 12px;
+  background: rgba(255,253,245,.72);
+  color: var(--navy-deep);
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: .5px;
+  padding: 3px 5px 3px 7px;
+  cursor: pointer;
+}
+
+.condition-chip.active {
+  background: var(--gold);
+}
+
+.condition-chip-remove {
+  border: none;
+  background: transparent;
+  color: var(--navy-deep);
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.condition-explanation {
+  display: none;
+  margin: -2px 0 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--gold);
+  background: rgba(255,253,245,.58);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.condition-explanation.on {
+  display: block;
+}
+
+.condition-explanation strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--navy-deep);
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.condition-explanation ul {
+  margin: 0;
+  padding-left: 17px;
 }
 
 .hstat.exhaustion {
@@ -1270,7 +1404,8 @@ background-position: top center;
   }
 
   .hstat.wide input,
-  .hstat.conditions input {
+  .hstat.conditions input,
+  .hstat.conditions .condition-picker {
     min-width: 0;
     width: 100%;
   }
@@ -1544,7 +1679,18 @@ background-position: top center;
   <div class="hstat"><label>HP Current</label><input id="hpCurrentInput" type="text" placeholder="—" /></div>
   <div class="hstat"><label>HP Max</label><input id="hpMaxInput" type="text" placeholder="—" /></div>
   <div class="hstat"><label>Hit Dice</label><input type="text" placeholder="5d8" /></div>
-  <div class="hstat wide conditions"><label>Current Conditions</label><input type="text" placeholder="poisoned, stunned…" /></div>
+  <div class="hstat wide conditions">
+    <label>Current Conditions</label>
+    <input id="currentConditionsInput" type="hidden" value="" />
+    <div class="condition-control">
+      <div id="currentConditionsDisplay" class="condition-display">Add condition…</div>
+      <div id="activeConditions" class="condition-chips"></div>
+      <span class="condition-chevron"></span>
+      <select id="conditionPicker" class="condition-picker" aria-label="Add condition" onchange="addSelectedCondition(this.value); this.value = '';">
+        <option value="">Add condition…</option>
+      </select>
+    </div>
+  </div>
 <div class="hstat wide exhaustion">
   <label>Exhaustion</label>
 
@@ -1558,6 +1704,7 @@ background-position: top center;
   </div>
 </div>
 </div>
+<div id="conditionExplanation" class="condition-explanation"></div>
 
     <div class="tabs">
       <button class="tab on" onclick="sw('main',this)">⚓ Main</button>
@@ -2101,6 +2248,7 @@ function collectSpellRows() {
 resetWeaponRows();
 resetSpellRows();
 </script>
+<script src="conditions.js"></script>
 <script>
 let currentCharacterId = null;
  let loadedCharacterUpdatedAt = null;
@@ -2115,10 +2263,138 @@ function saveCharacters(characters) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(characters));
 }
 
+let focusedCondition = "";
+
+function populateConditionDropdown() {
+  const dropdown = document.getElementById("conditionPicker");
+  if (!dropdown) return;
+
+  dropdown.innerHTML = `
+    <option value="">Add condition…</option>
+    ${Object.keys(CONDITION_DETAILS)
+      .map(condition => `<option value="${condition}">${condition}</option>`)
+      .join("")}
+  `;
+}
+
+function getSelectedConditions() {
+  const input = document.getElementById("currentConditionsInput");
+  if (!input || !input.value.trim()) return [];
+
+  const knownConditions = Object.keys(CONDITION_DETAILS);
+
+  return input.value
+    .split(",")
+    .map(value => value.trim())
+    .filter(Boolean)
+    .map(value =>
+      knownConditions.find(condition =>
+        condition.toLowerCase() === value.toLowerCase()
+      ) || value
+    )
+    .filter((value, index, array) =>
+      array.findIndex(item => item.toLowerCase() === value.toLowerCase()) === index
+    );
+}
+
+function setSelectedConditions(conditions) {
+  const input = document.getElementById("currentConditionsInput");
+  if (!input) return;
+
+  input.value = conditions.join(", ");
+}
+
+function addSelectedCondition(condition) {
+  if (!condition) return;
+
+  const conditions = getSelectedConditions();
+
+  if (!conditions.some(item => item.toLowerCase() === condition.toLowerCase())) {
+    conditions.push(condition);
+    setSelectedConditions(conditions);
+  }
+
+  focusedCondition = condition;
+  renderSelectedConditions();
+}
+
+function removeSelectedCondition(condition, event) {
+  if (event) event.stopPropagation();
+
+  const conditions = getSelectedConditions().filter(
+    item => item.toLowerCase() !== condition.toLowerCase()
+  );
+
+  setSelectedConditions(conditions);
+
+  if (focusedCondition.toLowerCase() === condition.toLowerCase()) {
+    focusedCondition = conditions[0] || "";
+  }
+
+  renderSelectedConditions();
+}
+
+function showConditionExplanation(condition) {
+  focusedCondition = condition;
+  renderSelectedConditions();
+}
+
+function renderSelectedConditions() {
+  const chips = document.getElementById("activeConditions");
+  const display = document.getElementById("currentConditionsDisplay");
+  const explanation = document.getElementById("conditionExplanation");
+  const conditions = getSelectedConditions();
+
+  if (!chips || !display || !explanation) return;
+
+  if (conditions.length) {
+    display.style.display = "none";
+  } else {
+    display.style.display = "flex";
+    display.textContent = "Add condition…";
+  }
+
+  chips.innerHTML = conditions.map(condition => `
+    <button
+      type="button"
+      class="condition-chip ${focusedCondition === condition ? "active" : ""}"
+      onclick="showConditionExplanation('${condition}')"
+    >
+      ${condition}
+      <span
+        class="condition-chip-remove"
+        onclick="removeSelectedCondition('${condition}', event)"
+        aria-label="Remove ${condition}"
+      >×</span>
+    </button>
+  `).join("");
+
+  if (!focusedCondition || !conditions.includes(focusedCondition)) {
+    focusedCondition = conditions[0] || "";
+  }
+
+  if (!focusedCondition || !CONDITION_DETAILS[focusedCondition]) {
+    explanation.classList.remove("on");
+    explanation.innerHTML = "";
+    return;
+  }
+
+  explanation.innerHTML = `
+    <strong>${focusedCondition}</strong>
+    <ul>
+      ${CONDITION_DETAILS[focusedCondition]
+        .map(detail => `<li>${detail}</li>`)
+        .join("")}
+    </ul>
+  `;
+  explanation.classList.add("on");
+}
+
 function getFields() {
   return Array.from(
     document.querySelectorAll(".sheet input, .sheet textarea, .sheet select")
   ).filter(field =>
+    !field.classList.contains("condition-picker") &&
     !field.closest(".feature-entry") &&
     !field.closest(".weapon-row") &&
     !field.closest(".spell-main-row") &&
@@ -2350,6 +2626,8 @@ renderFeatureEntries("featList", character.customLists?.feats || []);
 resetWeaponRows(character.customLists?.weapons || DEFAULT_WEAPON_ROWS);
 resetSpellRows(character.customLists?.spells || DEFAULT_SPELL_ROWS);
 applyUiState(character.uiState || {});
+focusedCondition = "";
+renderSelectedConditions();
 
 // HP is also stored explicitly in the character summary.
 // Reapply it by id so layout changes cannot shift these two fields.
@@ -2417,6 +2695,8 @@ renderFeatureEntries("featList", []);
 resetWeaponRows();
 resetSpellRows();
 applyUiState({});
+focusedCondition = "";
+renderSelectedConditions();
 
 showSheet();
 }
@@ -2540,8 +2820,10 @@ function showSheet() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  populateConditionDropdown();
   renderCharacterList();
   showStartPage();
+  renderSelectedConditions();
    renderFeatureEntries("featList", []);
 
   document.getElementById("newCharacterBtn").addEventListener("click", newCharacter);
