@@ -1,6 +1,6 @@
 {
   "id": "f7399244-4d80-4b0d-9dd1-c2d4ea53d26a",
-  "updatedAt": "2026-05-31T17:25:06.439Z",
+  "updatedAt": "2026-05-31T17:34:48.941Z",
   "summary": {
     "name": "Mara Flint",
     "armorClass": "",
@@ -60,7 +60,7 @@
     },
     {
       "index": 12,
-      "value": ""
+      "value": "1d10"
     },
     {
       "index": 13,
@@ -220,7 +220,7 @@
     },
     {
       "index": 52,
-      "value": "Darkvision: 60 ft.\nSpeed (Walking): 30 ft.\nSpeed (Swimming): 20–40 ft."
+      "value": "Darkvision: 60 ft.\nSpeed (Swimming): 20–40 ft.\nWeapons: Simple & Martial\nArmor: Light & Medium & Shields"
     },
     {
       "index": 53,
@@ -330,9 +330,9 @@
   "uiState": {
     "inspiration": false,
     "skillProficiencies": [
+      true,
       false,
-      false,
-      false,
+      true,
       false,
       false,
       false,
@@ -383,16 +383,30 @@
       },
       {
         "name": "Friend of Fauna",
-        "short": "Able to speak to all animals",
+        "short": "Able to speak to all animals.",
         "resource": "",
         "details": "The Selkie are fey that are naturally friendly towards animals. Although they’ve bonded specifically with seals, they are innately able to speak with all animals.",
         "open": false
       },
       {
-        "name": "Feat",
-        "short": "Short summary of what this feat does.",
+        "name": "Fey Ancestry",
+        "short": "Advantage on saving throws against Charmed. ",
         "resource": "",
-        "details": "",
+        "details": "Selkies are a type of fey. Therefore, they have Advantage on saving throws that they make to avoid or end the Charmed condition.",
+        "open": false
+      },
+      {
+        "name": "Natural Adept",
+        "short": "Advantage on foraging and can sleep with no shelter.",
+        "resource": "",
+        "details": "Selkies have abandoned the Frontier of Dawn, willingly choosing to survive in the harsh circumstances of the Material Plane in order to live with their chosen companions: the seals. Therefore, Selkies have become adept at survival. They have Advantage on foraging and are used to sleeping outside without shelter.",
+        "open": false
+      },
+      {
+        "name": "Selkie's Nature",
+        "short": "Wis or Seal; swim of 40, AC13+Wis, Temp hp 3xlvl",
+        "resource": "",
+        "details": "Though it began with donning the pelts of seals that they had befriended, forced evolution caused the Selkies to bond with the pelts and companions on a genetic level. In the present day, Selkies can choose to follow their instincts or fight them with a Wisdom saving throw (DC 10), as they are instinctually driven to transform into a seal when they enter a body of water.\n\nTransforming into a seal, they gain the ability to breathe underwater for up to an hour and gain a swimming speed of 40 ft.\n\nWhile in the shape of a seal, the Selkie’s Armor Class is equal to 13 + their Wisdom modifier if that total is higher than the Natural Seal’s AC of 15. In addition, Selkies gain a number of Temporary Hit Points equal to three times their level.",
         "open": false
       }
     ],
