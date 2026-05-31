@@ -2103,6 +2103,7 @@ resetSpellRows();
 </script>
 <script>
 let currentCharacterId = null;
+ let loadedCharacterUpdatedAt = null;
 
 const STORAGE_KEY = "mythicalBlueCharacters";
 
@@ -2303,9 +2304,10 @@ function collectCharacterData() {
     value: field.type === "checkbox" ? field.checked : field.value
   }));
 
-  return {
-    id: currentCharacterId || crypto.randomUUID(),
-    updatedAt: new Date().toISOString(),
+return {
+  id: currentCharacterId || crypto.randomUUID(),
+  expectedUpdatedAt: loadedCharacterUpdatedAt,
+  updatedAt: new Date().toISOString(),
 summary: {
   name: getValueByExactLabel("Character Name") || "Unnamed Character",
   armorClass: getValueByExactLabel("Armor Class"),
@@ -2326,6 +2328,7 @@ customLists: {
 
 function loadCharacter(character) {
   currentCharacterId = character.id;
+  loadedCharacterUpdatedAt = character.updatedAt || null;
   const savedFields = character.fields || [];
 
   getFields().forEach((field, index) => {
@@ -2378,17 +2381,18 @@ async function saveCurrentCharacter(showAlert = true) {
 
     const result = await response.json();
 
-    if (!response.ok) {
-      console.error(result);
-      alert("Failed to save character.");
-      return;
-    }
+if (!response.ok) {
+  console.error(result);
+  alert(result.error || "Failed to save character.");
+  return;
+}
 
-    currentCharacterId = data.id;
+currentCharacterId = data.id;
+loadedCharacterUpdatedAt = result.updatedAt || data.updatedAt;
 
-    if (showAlert) {
-      alert("Character saved!");
-    }
+if (showAlert) {
+  alert("Character saved!");
+}
 
     renderCharacterList();
 
@@ -2399,6 +2403,7 @@ async function saveCurrentCharacter(showAlert = true) {
 }
 function newCharacter() {
   currentCharacterId = crypto.randomUUID();
+  loadedCharacterUpdatedAt = null;
 
   getFields().forEach(field => {
     if (field.type === "checkbox") {
@@ -2427,20 +2432,24 @@ async function deleteCurrentCharacter() {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({ id: currentCharacterId })
+body: JSON.stringify({
+  id: currentCharacterId,
+  expectedUpdatedAt: loadedCharacterUpdatedAt
+})
     });
 
     const result = await response.json();
 
     if (!response.ok) {
       console.error(result);
-      alert("Failed to delete character.");
+alert(result.error || "Failed to delete character.");
       return;
     }
 
-    currentCharacterId = null;
+currentCharacterId = null;
+loadedCharacterUpdatedAt = null;
 
-    await renderCharacterList();
+await renderCharacterList();
     showStartPage();
 
     alert("Character deleted!");
@@ -2456,15 +2465,20 @@ async function renderCharacterList() {
   let characters = [];
 
   try {
-    const response = await fetch(`/.netlify/functions/get-character-index?cacheBust=${Date.now()}`, {
-      cache: "no-store"
-    });
+    const response = await fetch(
+      `/.netlify/functions/get-character-index?cacheBust=${Date.now()}`,
+      {
+        cache: "no-store"
+      }
+    );
+
+    const result = await response.json();
 
     if (!response.ok) {
-      throw new Error(await response.text());
+      throw new Error(result.error || "Could not load character index.");
     }
 
-    characters = await response.json();
+    characters = result;
   } catch (error) {
     console.error(error);
     list.innerHTML = "<p>Could not load saved characters.</p>";
@@ -2477,7 +2491,7 @@ async function renderCharacterList() {
   }
 
   list.innerHTML = characters.map(character => `
-    <div class="character-card" data-id="${character.id}" data-file="${character.file}">
+    <div class="character-card" data-id="${character.id}">
       <strong>${character.name}</strong><br>
       Armor Class: ${character.armorClass || "—"}<br>
       Hit Points: ${character.hpCurrent || "—"} / ${character.hpMax || "—"}<br>
@@ -2489,19 +2503,25 @@ async function renderCharacterList() {
   document.querySelectorAll(".character-card").forEach(card => {
     card.addEventListener("click", async () => {
       try {
-        const response = await fetch(`/.netlify/functions/get-character?id=${encodeURIComponent(card.dataset.id)}&cacheBust=${Date.now()}`, {
-          cache: "no-store"
-        });
+        const response = await fetch(
+          `/.netlify/functions/get-character?id=${encodeURIComponent(
+            card.dataset.id
+          )}&cacheBust=${Date.now()}`,
+          {
+            cache: "no-store"
+          }
+        );
+
+        const result = await response.json();
 
         if (!response.ok) {
-          throw new Error(await response.text());
+          throw new Error(result.error || "Could not load character.");
         }
 
-        const character = await response.json();
-        loadCharacter(character);
+        loadCharacter(result);
       } catch (error) {
         console.error(error);
-        alert("Could not open this character.");
+        alert(error.message || "Could not load character.");
       }
     });
   });
@@ -2530,6 +2550,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById("backToStartBtn").addEventListener("click", async () => {
   currentCharacterId = null;
+  loadedCharacterUpdatedAt = null;
   showStartPage();
   await renderCharacterList();
 });
