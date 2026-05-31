@@ -1,6 +1,6 @@
 {
   "id": "a0f2d0e2-3dc5-46ab-9b65-8ce9d0e8b5f1",
-  "updatedAt": "2026-05-31T18:42:46.015Z",
+  "updatedAt": "2026-05-31T19:13:38.979Z",
   "summary": {
     "name": "Nimue",
     "armorClass": "13",
@@ -377,6 +377,7 @@
       {
         "name": "Goose: Golden Egg",
         "short": "Give inspiration at critical hit. ",
+        "hasResource": false,
         "resource": "",
         "details": "Whenever you make a critical hit, you can take or give a heroic inspiration. Giving can only be done to allies within 30 ft of you.",
         "open": false
@@ -384,6 +385,7 @@
       {
         "name": "Goose: Corrupted Egg",
         "short": "At 1/2 health, DC15 dex save or 2d8 force and 10ft push.",
+        "hasResource": true,
         "resource": "1/1 Long Rest",
         "details": "When you are equal to or below 1/2th of health, you explode in frustration. Unleashing a burst of energy with a 15 ft radius around you (once per long rest). Those within your vicinity (allies and enemies alike) will need to make a dexterity saving throw (DC 15). Upon failure, they’ll be pushed 10 ft away and take 2D8 force damage. Upon a successful save, they’ll only take half the damage.",
         "open": false
@@ -391,6 +393,7 @@
       {
         "name": "Amphibious",
         "short": "Ability to breathe and move above and below water.",
+        "hasResource": false,
         "resource": "",
         "details": "Aeternians have grown gills, webbing between their phalanges, and translucent pearl-like scales which become  \nvisible underwater; allowing them to breathe and swim underwater no different than on land.  ",
         "open": false
@@ -398,6 +401,7 @@
       {
         "name": "Cold Climate Adept",
         "short": "Unbothered by cold climate.",
+        "hasResource": false,
         "resource": "",
         "details": "Aeternians have adapted to the cold of the deep, allowing them to become unbothered by cold climate  \ntemperatures, though they may require more hydration in warmer climates.  ",
         "open": false
@@ -405,6 +409,7 @@
       {
         "name": "Bioluminescence",
         "short": "5/15ft of emitting dim light in natural darkness.",
+        "hasResource": false,
         "resource": "",
         "details": "Before the Aeternians had discovered how to light their underwater Queendom, they themselves emitted light  in darkness through bioluminescence.  \n\nWhen in natural darkness, the scales of the Aeternians softly exude a dim light. On land their scales are less  on the surface of their skin; therefore they only emit dim light for 5 ft, while underwater their scales surface,  due to which the Aeternians’ bioluminescence is strengthened to emitting dim light for 15 ft. The  bioluminescence does not shine within magical darkness.  \n\nThe bioluminescence effect comes from releasing the stored light within the scales of the Aeternian.  \nGenerally, 6–8 hours of exposure to a light source is required to store enough light to generate the effect.  As such, in covert situations, Aeternians who do not wish to shed light will ensure to either not be exposed  to a light source, or to fully cover themselves. However, the lack of natural light is regarded as an indication  of shady business; an Aeternian who does not emit bioluminescence is commonly viewed with suspicion  \nby others of their kin. ",
         "open": false
@@ -412,6 +417,7 @@
       {
         "name": "Aquatic Affiliation",
         "short": "Adept at handling aquatic beasts.",
+        "hasResource": false,
         "resource": "",
         "details": "Due to centuries of living below the water surface, the Aeternians have become adept in communing and  handling aquatic beasts.  ",
         "open": false
@@ -419,6 +425,7 @@
       {
         "name": "Siren's Call",
         "short": "Can cast Siren's Call equal to proficiency bonus.",
+        "hasResource": true,
         "resource": "2/2 Long Rest",
         "details": "The geographical change of the Aeternia Queendom came with new forms of danger. However, due to their  brilliant minds and abundant forms of art, they quickly became connected to the Sirens, a species that are  natural denizens of the sea.  \n\nThrough them they learned the Siren's Call, a method to warn others while forcing their assailants to move  away from them. They can cast this spell of warding a number of times equal to their proficiency bonus  per long rest.  \n\nIntelligence, Wisdom, or Charisma is their spellcasting ability for this trait (choose when you select this race). -> Charisma",
         "open": false
@@ -426,6 +433,7 @@
       {
         "name": "Versatile: Cleric Initiate",
         "short": "Guidance & Spare the Dying, Healing Word.",
+        "hasResource": true,
         "resource": "1/1 Long Rest",
         "details": "Aeternians are as versatile as their surface-born counterparts: humans. Depending on their origin they gain  a matching feat (gain an Origin feat of choice). -> Cleric Initiate\n\nTwo Cantrips. You learn two cantrips of your choice from the Cleric, Druid, or Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat's spells (choose when you select this feat). -> Charisma; Guidance & Spare the Dying\n\nLevel 1 Spell. Choose a level 1 spell from the same list you selected for this feat's cantrips. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have. -> Healing Word\n\nSpell Change. Whenever you gain a new level, you can replace one of the spells you chose for this feat with a different spell of the same level from the chosen spell list.\n\nRepeatable. You can take this feat more than once, but you must choose a different spell list each time.",
         "open": false
@@ -433,6 +441,7 @@
       {
         "name": "Resourceful",
         "short": "Gain Heroic Inspiration at Long Rest.",
+        "hasResource": true,
         "resource": "1/1 Long Rest",
         "details": "Similar to their surface-born counterparts (humans), Aeternians gain Heroic Inspiration whenever they finish  a Long Rest.",
         "open": false
@@ -440,6 +449,7 @@
       {
         "name": "Innate Sorcery",
         "short": "Spell save DC +1 and advantage on attack rolls.",
+        "hasResource": true,
         "resource": "2/2 Long Rest",
         "details": "An event in your past left an indelible mark on you, infusing you with simmering magic. As a Bonus Action, you can unleash that magic for 1 minute, during which you gain the following benefits:\n\nThe spell save DC of your Sorcerer spells increases by 1.\nYou have Advantage on the attack rolls of Sorcerer spells you cast.\nYou can use this feature twice, and you regain all expended uses of it when you finish a Long Rest.",
         "open": false
