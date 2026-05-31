@@ -1407,7 +1407,9 @@ background-position: top center;
     padding: 145px 14px 36px;
     overflow-x: hidden;
 
-    background-size: auto 900px;
+    /* Match the desktop texture scale on mobile.
+       The image stays wide and the sides are cropped rather than squeezed. */
+    background-size: 1000px auto;
     background-repeat: repeat-y;
     background-position: top center;
   }
@@ -1617,7 +1619,8 @@ background-position: top center;
   .sheet {
     padding: 125px 10px 28px;
 
-    background-size: auto 760px;
+    /* Keep nearly the same desktop texture scale on narrow phones too. */
+    background-size: 900px auto;
     background-repeat: repeat-y;
     background-position: top center;
   }
