@@ -1,6 +1,6 @@
 {
   "id": "daff594f-ebc2-4181-b841-2deaff7791d8",
-  "updatedAt": "2026-05-31T08:45:40.525Z",
+  "updatedAt": "2026-05-31T08:55:33.487Z",
   "summary": {
     "name": "Nimue",
     "armorClass": "13",
@@ -558,6 +558,30 @@
       },
       {
         "level": "1",
+        "name": "Siren's Call (Aeternian)",
+        "castTime": "Action",
+        "range": "Self",
+        "concentration": false,
+        "ritual": false,
+        "material": false,
+        "effect": "Con save; 15/20 ft cone of 2d8 thunder and pushed 15/20 ft",
+        "details": "Spell Level: 1st\nCasting Time: 1 Action\nRange/Area: Self — 15 ft. cone\nComponents: V, S\n\nDuration: Instantaneous\nSchool: Evocation\nAttack/Save: Constitution Save\nDamage/Effect: Thunder\n\nDescription\nThrough the echoes, your call for help shall be heard. A defensive spell created by the magic researchers of the Aeternia kingdom. As you cry for help, you forcefully push away those who mean you harm. However, be mindful, as sound transfers differently under water.\n\nOn Land\nEach creature within a 15 ft. cone makes a Constitution saving throw. On a failed save, they take 2d8 Thunder damage and are pushed away from you by 5 ft. On a successful save, they take half the damage and are not pushed.\n\nYour call travels over 100 ft. on land.\n\nUnder Water\nEach creature within a 20 ft. cone makes a Constitution saving throw. On a failed save, they take 2d8 Thunder damage and are pushed away from you by 15 ft. On a successful save, they take half the damage and are not pushed.\n\nYour call travels over 300 ft. through water.\n\nHigher-Level Spell Slot\nThe damage increases by 1d8 for each spell slot level above 1. ",
+        "open": false
+      },
+      {
+        "level": "1",
+        "name": "Healing Word (Cleric Initiate)",
+        "castTime": "Bonus Action",
+        "range": "60 ft",
+        "concentration": false,
+        "ritual": false,
+        "material": false,
+        "effect": "2d4+4 healing",
+        "details": "Level 1 Abjuration (Bard, Cleric, Druid)\n\nCasting Time: Bonus Action\nRange: 60 feet\nComponents: V\nDuration: Instantaneous\n\nA creature of your choice that you can see within range regains Hit Points equal to 2d4 plus your spellcasting ability modifier.\n\nUsing a Higher-Level Spell Slot. The healing increases by 2d4 for each spell slot level above 1.",
+        "open": false
+      },
+      {
+        "level": "1",
         "name": "Bubble Spray",
         "castTime": "Action",
         "range": "Self",
@@ -578,18 +602,6 @@
         "material": true,
         "effect": "Dex save; 3d8/3d10 cold damage and target falls prone/is pushed downward",
         "details": "Spell Level: 1st\nCasting Time: 1 Action\nRange/Area: 90 ft. — 5 ft. square\nComponents: S, M*\n*A small vial of water\n\nDuration: Instantaneous\nSchool: Conjuration\nAttack/Save: Dexterity Save\nDamage/Effect: Cold & Control\n\nDescription\nAs you spin around your vial of water, a whirlpool comes to be. Uncorking the vial will release said whirlpool upon a target within range (90 ft.). The target must make a Dexterity saving throw or experience the full effect of the spell. The effect of the spell differs depending on whether the target is on the surface or below it:\n\nOn Land\nThe target takes 3d8 cold damage and falls prone. On a successful save, the target takes half the damage and does not fall prone.\n\nUnder Water\nThe target takes 3d10 cold damage and is pushed downward by 30 ft. On a successful save, the target takes half the damage and is not pushed downward.\n\nHigher-Level Spell Slot\nFor each spell slot above level 1, an extra whirlpool is created. ",
-        "open": false
-      },
-      {
-        "level": "1",
-        "name": "Healing Word",
-        "castTime": "Bonus Action",
-        "range": "60 ft",
-        "concentration": false,
-        "ritual": false,
-        "material": false,
-        "effect": "2d4+4 healing",
-        "details": "Level 1 Abjuration (Bard, Cleric, Druid)\n\nCasting Time: Bonus Action\nRange: 60 feet\nComponents: V\nDuration: Instantaneous\n\nA creature of your choice that you can see within range regains Hit Points equal to 2d4 plus your spellcasting ability modifier.\n\nUsing a Higher-Level Spell Slot. The healing increases by 2d4 for each spell slot level above 1.",
         "open": false
       }
     ]
