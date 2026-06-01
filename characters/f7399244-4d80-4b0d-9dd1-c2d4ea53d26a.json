@@ -1,11 +1,13 @@
 {
   "id": "f7399244-4d80-4b0d-9dd1-c2d4ea53d26a",
-  "updatedAt": "2026-05-31T17:44:26.578Z",
+  "updatedAt": "2026-06-01T14:17:16.358Z",
   "summary": {
     "name": "Mara Flint",
     "armorClass": "",
     "hpCurrent": "",
     "hpMax": "",
+    "tempHp": "",
+    "hitDice": "1d10",
     "passivePerception": "",
     "currentConditions": ""
   },
@@ -60,7 +62,7 @@
     },
     {
       "index": 12,
-      "value": "1d10"
+      "value": ""
     },
     {
       "index": 13,
@@ -224,7 +226,7 @@
     },
     {
       "index": 53,
-      "value": ""
+      "value": "1d10"
     },
     {
       "index": 54,
@@ -377,6 +379,7 @@
       {
         "name": "Natural Blubber",
         "short": "Cold Resistance",
+        "hasResource": false,
         "resource": "",
         "details": "As the Selkie became one with their seal friends, they adapted to the chilling cold of the water by adopting a thin layer of natural blubber below their skin, granting them resistance to cold damage.",
         "open": false
@@ -384,6 +387,7 @@
       {
         "name": "Friend of Fauna",
         "short": "Able to speak to all animals.",
+        "hasResource": false,
         "resource": "",
         "details": "The Selkie are fey that are naturally friendly towards animals. Although they’ve bonded specifically with seals, they are innately able to speak with all animals.",
         "open": false
@@ -391,6 +395,7 @@
       {
         "name": "Fey Ancestry",
         "short": "Advantage on saving throws against Charmed. ",
+        "hasResource": false,
         "resource": "",
         "details": "Selkies are a type of fey. Therefore, they have Advantage on saving throws that they make to avoid or end the Charmed condition.",
         "open": false
@@ -398,6 +403,7 @@
       {
         "name": "Natural Adept",
         "short": "Advantage on foraging and can sleep with no shelter.",
+        "hasResource": false,
         "resource": "",
         "details": "Selkies have abandoned the Frontier of Dawn, willingly choosing to survive in the harsh circumstances of the Material Plane in order to live with their chosen companions: the seals. Therefore, Selkies have become adept at survival. They have Advantage on foraging and are used to sleeping outside without shelter.",
         "open": false
@@ -405,6 +411,7 @@
       {
         "name": "Selkie's Nature",
         "short": "Wis or Seal; swim of 40, AC13+Wis, Temp hp 3xlvl",
+        "hasResource": false,
         "resource": "",
         "details": "Though it began with donning the pelts of seals that they had befriended, forced evolution caused the Selkies to bond with the pelts and companions on a genetic level. In the present day, Selkies can choose to follow their instincts or fight them with a Wisdom saving throw (DC 10), as they are instinctually driven to transform into a seal when they enter a body of water.\n\nTransforming into a seal, they gain the ability to breathe underwater for up to an hour and gain a swimming speed of 40 ft.\n\nWhile in the shape of a seal, the Selkie’s Armor Class is equal to 13 + their Wisdom modifier if that total is higher than the Natural Seal’s AC of 15. In addition, Selkies gain a number of Temporary Hit Points equal to three times their level.",
         "open": false
@@ -412,6 +419,7 @@
       {
         "name": "Favored Enemy",
         "short": "Cast Hunter's Mark without spell slot. ",
+        "hasResource": true,
         "resource": "2/2 Long Rest",
         "details": "You always have the Hunter's Mark spell prepared.\nYou can cast it twice without expending a spell slot, and you regain all expended uses of this ability when you finish a Long Rest.\n\nThe number of times you can cast the spell without a spell slot increases when you reach certain Ranger Levels, as shown in the Favored Enemy column of the Ranger Features table.",
         "open": false
@@ -419,6 +427,7 @@
       {
         "name": "Weapon Mastery",
         "short": "Mastery of two weapons:",
+        "hasResource": false,
         "resource": "",
         "details": "Your training with weapons allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Longbows and Shortswords.\n\nWhenever you finish a Long Rest, you can change the kinds of weapons you chose. For Example, you could switch to using the mastery properties of Scimitars and Longswords.",
         "open": false
