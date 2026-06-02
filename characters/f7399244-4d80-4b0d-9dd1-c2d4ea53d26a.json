@@ -1,6 +1,7 @@
 {
+  "schemaVersion": 2,
   "id": "f7399244-4d80-4b0d-9dd1-c2d4ea53d26a",
-  "updatedAt": "2026-06-01T14:17:16.358Z",
+  "updatedAt": "2026-06-02T22:18:28.585Z",
   "summary": {
     "name": "Mara Flint",
     "armorClass": "",
@@ -29,20 +30,20 @@
     "proficiencyBonus": "+2",
     "passivePerception": "",
     "strengthModifier": "",
-    "strengthScore": "",
+    "strengthScore": "11",
     "strengthSavingThrow": "",
     "athletics": "",
     "dexterityModifier": "",
-    "dexterityScore": "",
+    "dexterityScore": "16",
     "dexteritySavingThrow": "",
     "acrobatics": "",
     "sleightOfHand": "",
     "stealth": "",
     "constitutionModifier": "",
-    "constitutionScore": "",
+    "constitutionScore": "14",
     "constitutionSavingThrow": "",
     "intelligenceModifier": "",
-    "intelligenceScore": "",
+    "intelligenceScore": "13",
     "intelligenceSavingThrow": "",
     "arcana": "",
     "history": "",
@@ -50,7 +51,7 @@
     "nature": "",
     "religion": "",
     "wisdomModifier": "",
-    "wisdomScore": "",
+    "wisdomScore": "15",
     "wisdomSavingThrow": "",
     "animalHandling": "",
     "insight": "",
@@ -58,7 +59,7 @@
     "perception": "",
     "survival": "",
     "charismaModifier": "",
-    "charismaScore": "",
+    "charismaScore": "14",
     "charismaSavingThrow": "",
     "deception": "",
     "intimidation": "",
@@ -338,6 +339,5 @@
         "open": false
       }
     ]
-  },
-  "schemaVersion": 2
+  }
 }
