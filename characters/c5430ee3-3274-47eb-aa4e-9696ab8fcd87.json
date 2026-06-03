@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "c5430ee3-3274-47eb-aa4e-9696ab8fcd87",
-  "updatedAt": "2026-06-03T17:15:42.500Z",
+  "updatedAt": "2026-06-03T17:19:09.551Z",
   "summary": {
     "name": "Vasir Serpentis",
     "armorClass": "",
@@ -20,8 +20,8 @@
     "speciesRace": "Serpentine",
     "subclass": "Bladesinger",
     "alignment": "",
-    "initiative": "",
-    "speed": "",
+    "initiative": "+1",
+    "speed": "30",
     "armorClass": "",
     "hpCurrent": "0",
     "hpMax": "8",
