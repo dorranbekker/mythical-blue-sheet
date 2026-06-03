@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "f7399244-4d80-4b0d-9dd1-c2d4ea53d26a",
-  "updatedAt": "2026-06-03T17:40:47.471Z",
+  "updatedAt": "2026-06-03T17:51:59.292Z",
   "summary": {
     "name": "Mara Flint",
     "armorClass": "15",
@@ -202,19 +202,19 @@
         "name": "Cutlass",
         "atk": "+5",
         "damage": "1d6+3 slashing",
-        "notes": "Finesse"
+        "notes": "Finesse, light"
       },
       {
-        "name": "Hand Crossbow",
-        "atk": "",
-        "damage": "",
-        "notes": ""
+        "name": "Hand Crossbow 2x",
+        "atk": "+5",
+        "damage": "1d6+3 piercing",
+        "notes": "Light,  30/120 ft"
       },
       {
         "name": "Dagger",
-        "atk": "",
-        "damage": "",
-        "notes": ""
+        "atk": "+5",
+        "damage": "1d4+3 slashing",
+        "notes": "Finesse, light"
       },
       {
         "name": "",
