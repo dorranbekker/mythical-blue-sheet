@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "c6c1c2a0-92d9-41b8-85a1-1d5f2fe7e6db",
-  "updatedAt": "2026-06-03T08:59:34.022Z",
+  "updatedAt": "2026-06-03T09:02:32.262Z",
   "summary": {
     "name": "Lillith",
     "armorClass": "15",
@@ -194,62 +194,14 @@
     "spells": [
       {
         "level": "C",
-        "name": "Mage Hand",
-        "castTime": "1 action",
-        "range": "30 ft",
-        "concentration": false,
-        "ritual": false,
-        "material": false,
-        "effect": "",
-        "details": "",
-        "open": false
-      },
-      {
-        "level": "C",
-        "name": "Control Water",
-        "castTime": "1 action",
-        "range": "300 ft",
-        "concentration": true,
-        "ritual": false,
-        "material": false,
-        "effect": "",
-        "details": "",
-        "open": false
-      },
-      {
-        "level": "1",
-        "name": "Fog Cloud",
-        "castTime": "1 action",
+        "name": "Dancing Lights",
+        "castTime": "Action",
         "range": "120 ft",
         "concentration": true,
         "ritual": false,
-        "material": false,
-        "effect": "",
-        "details": "",
-        "open": false
-      },
-      {
-        "level": "2",
-        "name": "Misty Step",
-        "castTime": "Bonus",
-        "range": "Self",
-        "concentration": false,
-        "ritual": false,
-        "material": false,
-        "effect": "",
-        "details": "",
-        "open": false
-      },
-      {
-        "level": "3",
-        "name": "Call Lightning",
-        "castTime": "1 action",
-        "range": "120 ft",
-        "concentration": true,
-        "ritual": false,
-        "material": false,
-        "effect": "",
-        "details": "",
+        "material": true,
+        "effect": "4 lights within range, 10ft radius, bonus action to move.",
+        "details": "Illusion Cantrip (Artificer, Bard, Sorcerer, Wizard)\n\nCasting Time: Action\nRange: 120 feet\nComponents: V, S, M (a bit of phosphorus)\nDuration: Concentration, up to 1 minute\n\nYou create up to four torch-size lights within range, making them appear as torches, lanterns, or glowing orbs that hover for the duration. Alternatively, you combine the four lights into one glowing Medium form that is vaguely humanlike. Whichever form you choose, each light sheds Dim Light in a 10-foot radius.\n\nAs a Bonus Action, you can move the lights up to 60 feet to a space within range. A light must be within 20 feet of another light created by this spell, and a light vanishes if it exceeds the spell’s range.",
         "open": false
       },
       {
