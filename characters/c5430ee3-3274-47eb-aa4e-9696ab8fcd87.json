@@ -1,10 +1,10 @@
 {
   "schemaVersion": 2,
   "id": "c5430ee3-3274-47eb-aa4e-9696ab8fcd87",
-  "updatedAt": "2026-06-03T17:30:19.886Z",
+  "updatedAt": "2026-06-03T17:31:07.692Z",
   "summary": {
     "name": "Vasir Serpentis",
-    "armorClass": "",
+    "armorClass": "14",
     "hpCurrent": "7",
     "hpMax": "7",
     "tempHp": "",
@@ -22,7 +22,7 @@
     "alignment": "",
     "initiative": "+1",
     "speed": "30",
-    "armorClass": "",
+    "armorClass": "14",
     "hpCurrent": "7",
     "hpMax": "7",
     "tempHp": "",
@@ -168,7 +168,7 @@
     "weapons": [
       {
         "name": "Scimitar",
-        "atk": "",
+        "atk": "+",
         "damage": "1d6+3 slashing",
         "notes": "Finesse"
       },
