@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "f7399244-4d80-4b0d-9dd1-c2d4ea53d26a",
-  "updatedAt": "2026-06-03T16:46:33.311Z",
+  "updatedAt": "2026-06-03T16:55:42.175Z",
   "summary": {
     "name": "Mara Flint",
     "armorClass": "15",
@@ -240,7 +240,7 @@
         "material": false,
         "effect": "1d6 force damage with every hit. Adv. on any Wis check to find target.",
         "details": "Level 1 Divination (Ranger)\n\nCasting Time: Bonus Action\nRange: 90 feet\nComponents: V\nDuration: Concentration, up to 1 hour\n\nYou magically mark one creature you can see within range as your quarry. Until the spell ends, you deal an extra 1d6 Force damage to the target whenever you hit it with an attack roll. You also have Advantage on any Wisdom (Perception or Survival) check you make to find it.\n\nIf the target drops to 0 Hit Points before this spell ends, you can take a Bonus Action to move the mark to a new creature you can see within range.\n\nUsing a Higher-Level Spell Slot. Your Concentration can last longer with a spell slot of level 3–4 (up to 8 hours) or 5+ (up to 24 hours).",
-        "open": false
+        "open": true
       },
       {
         "level": "1",
@@ -256,13 +256,13 @@
       },
       {
         "level": "1",
-        "name": "Longstrider?",
-        "castTime": "Action",
-        "range": "Touch",
+        "name": "Ensnaring strike",
+        "castTime": "Bonus Action",
+        "range": "Self",
         "concentration": false,
         "ritual": false,
         "material": false,
-        "effect": "",
+        "effect": "1d6 piercing damage at the start of each turn.",
         "details": "",
         "open": false
       },
