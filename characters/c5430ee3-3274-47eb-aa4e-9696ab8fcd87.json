@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "c5430ee3-3274-47eb-aa4e-9696ab8fcd87",
-  "updatedAt": "2026-06-03T19:09:22.609Z",
+  "updatedAt": "2026-06-03T19:16:28.673Z",
   "summary": {
     "name": "Vasir Serpentis",
     "armorClass": "14",
@@ -157,12 +157,12 @@
         "open": true
       },
       {
-        "name": "Feat",
-        "short": "Short summary of what this feat does.",
+        "name": "You Cannot Hide from Me",
+        "short": "Faerie Fire / Day",
         "hasResource": false,
         "resource": "",
-        "details": "",
-        "open": false
+        "details": "Through your years of training under the Gladius clan, you’ve learnt to reveal what others conceal by learning the secrets of Faerie Fire*. You’re able to cast it once per long rest without the use of a spell slot. You can also cast Faerie Fire with any spell slots that you have. \n",
+        "open": true
       }
     ],
     "weapons": [
