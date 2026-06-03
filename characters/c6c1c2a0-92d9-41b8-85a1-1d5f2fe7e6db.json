@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "c6c1c2a0-92d9-41b8-85a1-1d5f2fe7e6db",
-  "updatedAt": "2026-06-03T20:44:55.769Z",
+  "updatedAt": "2026-06-03T21:13:53.375Z",
   "summary": {
     "name": "Lillith",
     "armorClass": "15",
@@ -65,7 +65,7 @@
     "intimidation": "-1",
     "performance": "-1",
     "persuasion": "+1",
-    "equipmentProficiencies": "Darkvision: 120 ft\nChain Shirt (Med. Armor)\nAmulet (Holy Symbol)\n1x Vial of alchemist fire (U can chuck it)",
+    "equipmentProficiencies": "Darkvision: 120 ft\nChain Shirt (Med. Armor)\nAmulet (Holy Symbol)\n1x Vial of alchemist fire (U can chuck it)\n1x Antitoxin \n",
     "hitDice": "1d8",
     "hitDiceSpent": "",
     "copperPieces": "",
