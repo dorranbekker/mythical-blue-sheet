@@ -1,10 +1,10 @@
 {
   "schemaVersion": 2,
   "id": "c2d9f7e6-44d2-4777-8608-47cf157bcb98",
-  "updatedAt": "2026-06-03T14:08:14.425Z",
+  "updatedAt": "2026-06-03T14:08:27.436Z",
   "summary": {
     "name": "Crowley",
-    "armorClass": "14",
+    "armorClass": "15",
     "hpCurrent": "10",
     "hpMax": "10",
     "tempHp": "",
@@ -22,7 +22,7 @@
     "alignment": "Chaotic Good",
     "initiative": "+6",
     "speed": "30",
-    "armorClass": "14",
+    "armorClass": "15",
     "hpCurrent": "10",
     "hpMax": "10",
     "tempHp": "",
