@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "f7399244-4d80-4b0d-9dd1-c2d4ea53d26a",
-  "updatedAt": "2026-06-03T10:59:18.123Z",
+  "updatedAt": "2026-06-03T11:16:44.613Z",
   "summary": {
     "name": "Mara Flint",
     "armorClass": "15",
@@ -73,7 +73,7 @@
     "electrumPieces": "",
     "goldPieces": "41",
     "platinumPieces": "",
-    "treasureNotes": "Choose A or B: (A) Studded Leather Armor, Scimitar, Shortsword, Longbow, 20 Arrows, Quiver, Druidic Focus (sprig of mistletoe), Explorer's Pack and 7 GP; or (B) 150 GP",
+    "treasureNotes": "* Binoculars\n* Cartographer’s Tools\n* Tent\n* Explorer’s Pack\n* Traveler’s Clothes\n* Arrows\n* Quiver\n* Druidic Focus (sprig of mistletoe)\nScimitar, Shortsword, Longbow",
     "spellcastingAbility": "WIS",
     "spellSaveDc": "",
     "spellAttackBonus": "",
