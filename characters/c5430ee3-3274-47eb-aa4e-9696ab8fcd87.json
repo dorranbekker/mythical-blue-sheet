@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "c5430ee3-3274-47eb-aa4e-9696ab8fcd87",
-  "updatedAt": "2026-06-03T17:31:07.692Z",
+  "updatedAt": "2026-06-03T17:32:58.771Z",
   "summary": {
     "name": "Vasir Serpentis",
     "armorClass": "14",
@@ -167,15 +167,15 @@
     ],
     "weapons": [
       {
-        "name": "Scimitar",
-        "atk": "+",
+        "name": "Shortsword",
+        "atk": "+3",
         "damage": "1d6+3 slashing",
         "notes": "Finesse"
       },
       {
-        "name": "",
-        "atk": "",
-        "damage": "",
+        "name": "True strike",
+        "atk": "+6",
+        "damage": "1d6 + 4 Radiant",
         "notes": ""
       },
       {
