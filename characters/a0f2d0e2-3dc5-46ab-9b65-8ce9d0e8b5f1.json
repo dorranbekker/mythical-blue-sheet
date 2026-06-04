@@ -1,21 +1,21 @@
 {
   "schemaVersion": 2,
   "id": "a0f2d0e2-3dc5-46ab-9b65-8ce9d0e8b5f1",
-  "updatedAt": "2026-06-02T09:23:16.901Z",
+  "updatedAt": "2026-06-04T12:57:23.835Z",
   "summary": {
     "name": "Nimue",
     "armorClass": "13",
     "hpCurrent": "8",
-    "hpMax": "8",
+    "hpMax": "14",
     "tempHp": "",
-    "hitDice": "1d6",
+    "hitDice": "2d6",
     "passivePerception": "11",
     "currentConditions": ""
   },
   "fields": {
     "characterName": "Nimue",
     "background": "Golden Goose",
-    "classLevel": "Sorcerer 1",
+    "classLevel": "Sorcerer 2",
     "experience": "",
     "speciesRace": "Aeternian",
     "subclass": "Thalassic",
@@ -24,7 +24,7 @@
     "speed": "30",
     "armorClass": "13",
     "hpCurrent": "8",
-    "hpMax": "8",
+    "hpMax": "14",
     "tempHp": "",
     "currentConditions": "",
     "proficiencyBonus": "2",
@@ -66,7 +66,7 @@
     "performance": "+6",
     "persuasion": "+6",
     "equipmentProficiencies": "Darkvision: 60ft\nSwim Speed: 30ft \nWeapons: Simple\nTools: Calligrapher's Supplies",
-    "hitDice": "1d6",
+    "hitDice": "2d6",
     "hitDiceSpent": "",
     "copperPieces": "",
     "silverPieces": "",
@@ -218,6 +218,14 @@
         "hasResource": true,
         "resource": "2/2 Long Rest",
         "details": "An event in your past left an indelible mark on you, infusing you with simmering magic. As a Bonus Action, you can unleash that magic for 1 minute, during which you gain the following benefits:\n\nThe spell save DC of your Sorcerer spells increases by 1.\nYou have Advantage on the attack rolls of Sorcerer spells you cast.\nYou can use this feature twice, and you regain all expended uses of it when you finish a Long Rest.",
+        "open": false
+      },
+      {
+        "name": "Font of Magic",
+        "short": "Sorcery Points",
+        "hasResource": true,
+        "resource": "2/2 Long Rest",
+        "details": "You can tap into the wellspring of magic within yourself. This wellspring is represented by Sorcery Points, which allow you to create a variety of magical effects.\n\nYou have 2 Sorcery Points, and you gain more as you reach higher levels, as shown in the Sorcery Points column of the Sorcerer Features table. You can’t have more Sorcery Points than the number shown in the table for your level. You regain all expended Sorcery Points when you finish a Long Rest.\n\nYou can use your Sorcery Points to fuel the options below, along with other features, such as Metamagic, that use those points.\n\nConverting Spell Slots to Sorcery Points. You can expend a spell slot to gain a number of Sorcery Points equal to the slot’s level (no action required).\n\nCreating Spell Slots. As a Bonus Action, you can transform unexpended Sorcery Points into one spell slot. The Creating Spell Slots table shows the cost of creating a spell slot of a given level, and it lists the minimum Sorcerer level you must be to create a slot. You can create a spell slot no higher than level 5.\n\nAny spell slot you create with this feature vanishes when you finish a Long Rest.\n\nCreating Spell Slots\nSpell Slot Level\tSorcery Point Cost\tMin. Sorcerer Level\n1\t2\t2\n2\t3\t3\n3\t5\t5\n4\t6\t7\n5\t7\t9",
         "open": false
       }
     ],
