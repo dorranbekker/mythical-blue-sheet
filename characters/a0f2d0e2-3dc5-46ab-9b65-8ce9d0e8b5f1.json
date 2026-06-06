@@ -65,7 +65,6 @@
     "intimidation": "+4",
     "performance": "+6",
     "persuasion": "+6",
-    "equipmentProficiencies": "Darkvision: 60ft\nSwim Speed: 30ft \nWeapons: Simple\nTools: Calligrapher's Supplies",
     "hitDice": "2d6",
     "hitDiceSpent": "",
     "copperPieces": "",
@@ -91,7 +90,8 @@
     "appearance": "Violet Eyes, Blue Hair",
     "languages": "Common\nAequor\n",
     "attunement": "",
-    "equipmentInventory": "Spear, 2 Daggers, Backpack, Caltrops, Crowbar, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin."
+    "equipmentInventory": "Spear, 2 Daggers, Backpack, Caltrops, Crowbar, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin.",
+    "equipment": ""
   },
   "uiState": {
     "inspiration": true,
@@ -420,6 +420,19 @@
         "details": "Level 1 Abjuration (Sorcerer, Wizard)\n\nCasting Time: Action\nRange: Touch\nComponents: V, S, M (a piece of cured leather)\nDuration: 8 hours\n\nYou touch a willing creature who isn’t wearing armor. Until the spell ends, the target’s base AC becomes 13 plus its Dexterity modifier. The spell ends early if the target dons armor.",
         "open": false
       }
-    ]
+    ],
+    "proficiencies": {
+      "armor": [],
+      "weapons": [
+        "Simple"
+      ],
+      "tools": [
+        "Calligrapher's Supplies"
+      ],
+      "other": [
+        "Darkvision: 60ft",
+        "Swim Speed: 30ft"
+      ]
+    }
   }
 }

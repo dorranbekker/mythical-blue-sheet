@@ -65,7 +65,6 @@
     "intimidation": "+2",
     "performance": "+2",
     "persuasion": "+4",
-    "equipmentProficiencies": "Darkvision: 60 ft.\nSpeed (Swimming): 20–40 ft.\nWeapons: Simple & Martial\nArmor: Light & Medium & Shields",
     "hitDice": "1d10",
     "hitDiceSpent": "",
     "copperPieces": "",
@@ -91,7 +90,8 @@
     "appearance": "Averag height. \nLong wavy brown/red hair that is often braided with feathers and small trinkets.\nSea green eyes, and sun kissed skin. \nShe wears practical pirates clothing. Favoring practical leather and weathered fabrics over anything fancy. A fitted leather corset and belts keep her gear close, while her sleeves from her white blouse are rolled up for freedom of movement. Leather pants with some small rope wrapped around the legs and the Boots are scuffed and strapped, ready for ship decks or rocky shores alike.\nSmall treasures collected from distant shores like shells, bits of sea glass, and unusual coins hang from cords and pouches on her belt.\nA persistent seagull is often found nearby.\nAt first glance Mara appears to be a carefree pirate chasing adventure, but beneath that free-spirited exterior lies a woman deeply connected to the ocean and fiercely protective of the creatures and wild places she calls home.\nShe carries herself with confidence and there is something unmistakably wild about her",
     "languages": "Common\nAqui (lv 3)",
     "attunement": "",
-    "equipmentInventory": "* Herbalism Kit\n* Traveler’s Clothes\n* Bedroll\n* Waterskin\n* Rations (7)\n* Rope\n* Net\n* Cheese\n* Sling\n* Sling Stones (30)\n* Arrows\n* Quiver\n* Druidic Focus (sprig of mistletoe)"
+    "equipmentInventory": "* Herbalism Kit\n* Traveler’s Clothes\n* Bedroll\n* Waterskin\n* Rations (7)\n* Rope\n* Net\n* Cheese\n* Sling\n* Sling Stones (30)\n* Arrows\n* Quiver\n* Druidic Focus (sprig of mistletoe)",
+    "equipment": ""
   },
   "uiState": {
     "inspiration": false,
@@ -338,6 +338,19 @@
         "details": "",
         "open": false
       }
-    ]
+    ],
+    "proficiencies": {
+      "armor": [
+        "Light & Medium & Shields"
+      ],
+      "weapons": [
+        "Simple & Martial"
+      ],
+      "tools": [],
+      "other": [
+        "Darkvision: 60 ft.",
+        "Speed (Swimming): 20–40 ft."
+      ]
+    }
   }
 }

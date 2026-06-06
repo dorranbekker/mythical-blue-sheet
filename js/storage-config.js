@@ -1,3 +1,5 @@
 window.APP_CONFIG = {
-  storageMode: "netlify"
+  storageMode: "local",
+  localStorageKey: "mythicalBlueSheetTestCharactersV2",
+  seedIndexUrl: "characters/test-character-index.json"
 };

@@ -65,7 +65,6 @@
     "intimidation": "+4",
     "performance": "+6",
     "persuasion": "+4",
-    "equipmentProficiencies": "Rapier, Leather Armour, Rope, Waterskin, Bedroll, Rations x5, Hunting Trap, Net, Cook's Utensils.\n\nArmour: Light Armour\nWeapons: Simple Weapons, Hand Crossbows, Longswords, Rapiers, Shortswords\nTools: Cook's Utensils, Lyre, Drums, Fiddle.",
     "hitDice": "1d8",
     "hitDiceSpent": "",
     "copperPieces": "3",
@@ -91,7 +90,8 @@
     "appearance": "",
     "languages": "",
     "attunement": "",
-    "equipmentInventory": ""
+    "equipmentInventory": "",
+    "equipment": "Rapier, Leather Armour, Rope, Waterskin, Bedroll, Rations x5, Hunting Trap, Net, Cook's Utensils."
   },
   "uiState": {
     "inspiration": false,
@@ -318,6 +318,18 @@
         "details": "Casting Time: Bonus Action\nRange: 60 feet\nComponents: V\nDuration: Instantaneous\n\nA creature of your choice that you can see within range regains Hit Points equal to 2d4 plus your spellcasting ability modifier.\n\nUsing a Higher-Level Spell Slot. The healing increases by 2d4 for each spell slot level above 1.",
         "open": false
       }
-    ]
+    ],
+    "proficiencies": {
+      "armor": [
+        "Light Armour"
+      ],
+      "weapons": [
+        "Simple Weapons, Hand Crossbows, Longswords, Rapiers, Shortswords"
+      ],
+      "tools": [
+        "Cook's Utensils, Lyre, Drums, Fiddle."
+      ],
+      "other": []
+    }
   }
 }

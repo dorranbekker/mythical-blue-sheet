@@ -65,7 +65,6 @@
     "intimidation": "-1",
     "performance": "-1",
     "persuasion": "+1",
-    "equipmentProficiencies": "Darkvision: 120 ft\nChain Shirt (Med. Armor)\nAmulet (Holy Symbol)\n1x Vial of alchemist fire (U can chuck it)\n1x Antitoxin \n5x healing potions\n",
     "hitDice": "1d8",
     "hitDiceSpent": "",
     "copperPieces": "",
@@ -91,7 +90,8 @@
     "appearance": "Above average height, lean, too long white hair, deep dark black eyes, wearing a scrambled together ensamble of cloth leather and blade. \n\nLillith carries a dark iron spear shaped like a harpoon, its haft wrapped in salt-stained leather and threaded with small shells, broken beads, and scraps of sea-worn bone.",
     "languages": "",
     "attunement": "",
-    "equipmentInventory": ""
+    "equipmentInventory": "",
+    "equipment": "Chain Shirt (Med. Armor)\nAmulet (Holy Symbol)\n1x Vial of alchemist fire (U can chuck it)\n1x Antitoxin\n5x healing potions"
   },
   "uiState": {
     "inspiration": false,
@@ -268,6 +268,14 @@
         "details": "",
         "open": false
       }
-    ]
+    ],
+    "proficiencies": {
+      "armor": [],
+      "weapons": [],
+      "tools": [],
+      "other": [
+        "Darkvision: 120 ft"
+      ]
+    }
   }
 }

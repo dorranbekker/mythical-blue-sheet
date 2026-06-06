@@ -65,7 +65,6 @@
     "intimidation": "",
     "performance": "",
     "persuasion": "",
-    "equipmentProficiencies": "Calligrapher's Supplies",
     "hitDice": "1d6",
     "hitDiceSpent": "",
     "copperPieces": "2",
@@ -91,7 +90,8 @@
     "appearance": "",
     "languages": "",
     "attunement": "",
-    "equipmentInventory": ""
+    "equipmentInventory": "",
+    "equipment": "Calligrapher's Supplies"
   },
   "uiState": {
     "inspiration": false,
@@ -306,6 +306,12 @@
         "details": "",
         "open": false
       }
-    ]
+    ],
+    "proficiencies": {
+      "armor": [],
+      "weapons": [],
+      "tools": [],
+      "other": []
+    }
   }
 }
