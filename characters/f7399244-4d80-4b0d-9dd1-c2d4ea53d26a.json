@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "f7399244-4d80-4b0d-9dd1-c2d4ea53d26a",
-  "updatedAt": "2026-06-08T00:12:41.111Z",
+  "updatedAt": "2026-06-08T00:13:53.251Z",
   "summary": {
     "name": "Mara Flint",
     "armorClass": "15",
@@ -760,7 +760,7 @@
       "neck": "",
       "cape": "",
       "armor": "",
-      "clothing": "",
+      "clothing": "item-f7399244-traveler-s-clothes-1",
       "mainHand": "",
       "offHand": "",
       "ring1": "",
