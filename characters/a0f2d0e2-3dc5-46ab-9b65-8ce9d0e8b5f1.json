@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "a0f2d0e2-3dc5-46ab-9b65-8ce9d0e8b5f1",
-  "updatedAt": "2026-06-06T23:14:48.987Z",
+  "updatedAt": "2026-06-08T00:14:35.284Z",
   "summary": {
     "name": "Nimue",
     "armorClass": "13",
@@ -14,12 +14,12 @@
   },
   "fields": {
     "characterName": "Nimue",
-    "background": "Golden Goose",
-    "classLevel": "Sorcerer 2",
-    "experience": "",
     "speciesRace": "Aeternian",
-    "subclass": "Thalassic",
+    "background": "Golden Goose",
     "alignment": "",
+    "level": "2",
+    "class": "Sorcerer",
+    "subclass": "Thalassic",
     "initiative": "+3",
     "speed": "30",
     "armorClass": "13",
@@ -67,12 +67,6 @@
     "persuasion": "+6",
     "hitDice": "2d6",
     "hitDiceSpent": "",
-    "copperPieces": "",
-    "silverPieces": "",
-    "electrumPieces": "",
-    "goldPieces": "28",
-    "platinumPieces": "",
-    "treasureNotes": "Calligrapher's Supplies\nFine Clothes\nBook about Thalassic Mythology\nArcane Focus (crystal)\nDungeoneer's Pack",
     "spellcastingAbility": "cha",
     "spellSaveDc": "14",
     "spellAttackBonus": "+6",
@@ -89,10 +83,17 @@
     "personalityIdealsBonds": "Zodiac: Sahet - the Twin Koi",
     "appearance": "Violet Eyes, Blue Hair",
     "languages": "Common\nAequor\n",
-    "attunement": "",
-    "equipmentInventory": "Spear, 2 Daggers, Backpack, Caltrops, Crowbar, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin.",
+    "journalNotes": "",
+    "copperPieces": "",
+    "silverPieces": "",
+    "electrumPieces": "",
+    "goldPieces": "28",
+    "platinumPieces": "",
+    "otherInventory": "",
     "equipment": "",
-    "otherInventory": ""
+    "equipmentInventory": "Spear, 2 Daggers, Backpack, Caltrops, Crowbar, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin.",
+    "treasureNotes": "Calligrapher's Supplies\nFine Clothes\nBook about Thalassic Mythology\nArcane Focus (crystal)\nDungeoneer's Pack",
+    "attunement": ""
   },
   "uiState": {
     "inspiration": true,
@@ -287,7 +288,19 @@
         "material": false,
         "effect": "1d4 to any ability check for 1 min",
         "details": "Divination Cantrip (Artificer, Cleric, Druid)\n\nCasting Time: Action\nRange: Touch\nComponents: V, S\nDuration: Concentration, up to 1 minute\n\nYou touch a willing creature and choose a skill. Until the spell ends, the creature adds 1d4 to any ability check using the chosen skill.",
-        "open": false
+        "open": false,
+        "sourceId": "",
+        "source": "",
+        "school": "Homebrew",
+        "duration": "",
+        "componentsText": "",
+        "classes": "",
+        "attackSave": "",
+        "damageHealing": "",
+        "damageType": "",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": false
       },
       {
         "level": "C",
@@ -299,7 +312,19 @@
         "material": false,
         "effect": "A creature with 0 hit points becomes stable",
         "details": "Necromancy Cantrip (Artificer, Cleric, Druid)\n\nCasting Time: Action\nRange: 15 feet\nComponents: V, S\nDuration: Instantaneous\n\nChoose a creature within range that has 0 Hit Points and isn’t dead. The creature becomes Stable.\n\nCantrip Upgrade. The range doubles when you reach levels 5 (30 feet), 11 (60 feet), and 17 (120 feet).",
-        "open": false
+        "open": false,
+        "sourceId": "",
+        "source": "",
+        "school": "Homebrew",
+        "duration": "",
+        "componentsText": "",
+        "classes": "",
+        "attackSave": "",
+        "damageHealing": "",
+        "damageType": "",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": false
       },
       {
         "level": "C",
@@ -311,7 +336,19 @@
         "material": false,
         "effect": "1d8 type of choice. Add d8 if you roll an 8. ",
         "details": "Evocation Cantrip (Sorcerer)\n\nCasting Time: Action\nRange: 120 feet\nComponents: V, S\nDuration: Instantaneous\n\nYou cast sorcerous energy at one creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d8 damage of a type you choose: Acid, Cold, Fire, Lightning, Poison, Psychic, or Thunder.\n\nIf you roll an 8 on a d8 for this spell, you can roll another d8, and add it to the damage. When you cast this spell, the maximum number of these d8s you can add to the spell’s damage equals your spellcasting ability modifier.\n\nCantrip Upgrade. The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).",
-        "open": false
+        "open": false,
+        "sourceId": "srd-sorcerous-burst",
+        "source": "SRD 5.2.1",
+        "school": "Evocation",
+        "duration": "Instantaneous",
+        "componentsText": "V, S",
+        "classes": "Sorcerer",
+        "attackSave": "Spell Attack",
+        "damageHealing": "1d8 / 2d8 / 3d8",
+        "damageType": "",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": false
       },
       {
         "level": "C",
@@ -323,7 +360,19 @@
         "material": false,
         "effect": "Control a spectral hand",
         "details": "Conjuration Cantrip (Artificer, Bard, Sorcerer, Warlock, Wizard)\n\nCasting Time: Action\nRange: 30 feet\nComponents: V, S\nDuration: 1 minute\n\nA spectral, floating hand appears at a point you choose within range. The hand lasts for the duration. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell again.\n\nWhen you cast the spell, you can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial.\n\nAs a Magic action on your later turns, you can control the hand thus again. As part of that action, you can move the hand up to 30 feet.\n\nThe hand can’t attack, activate magic items, or carry more than 10 pounds.",
-        "open": false
+        "open": false,
+        "sourceId": "srd-mage-hand",
+        "source": "SRD 5.2.1",
+        "school": "Conjuration",
+        "duration": "1 minute",
+        "componentsText": "V, S",
+        "classes": "Bard, Sorcerer, Warlock, Wizard",
+        "attackSave": "",
+        "damageHealing": "",
+        "damageType": "",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": false
       },
       {
         "level": "C",
@@ -335,7 +384,19 @@
         "material": true,
         "effect": "Repair a break or tear no larger than 1 foot",
         "details": "Transmutation Cantrip (Bard, Cleric, Druid, Sorcerer, Wizard)\n\nCasting Time: 1 minute\nRange: Touch\nComponents: V, S, M (two lodestones)\nDuration: Instantaneous\n\nThis spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.\n\nThis spell can physically repair a magic item, but it can’t restore magic to such an object.",
-        "open": false
+        "open": false,
+        "sourceId": "srd-mending",
+        "source": "SRD 5.2.1",
+        "school": "Transmutation",
+        "duration": "Instantaneous",
+        "componentsText": "V, S, M (two lodestones)",
+        "classes": "Bard, Cleric, Druid, Sorcerer, Wizard",
+        "attackSave": "",
+        "damageHealing": "",
+        "damageType": "",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": false
       },
       {
         "level": "C",
@@ -347,7 +408,19 @@
         "material": false,
         "effect": "Create a magical effect",
         "details": "Transmutation Cantrip (Artificer, Bard, Sorcerer, Warlock, Wizard)\n\nCasting Time: Action\nRange: 10 feet\nComponents: V, S\nDuration: Up to 1 hour\n\nYou create a magical effect within range. Choose the effect from the options below. If you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time.\n\nSensory Effect. You create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor.\n\nFire Play. You instantaneously light or snuff out a candle, a torch, or a small campfire.\n\nClean or Soil. You instantaneously clean or soil an object no larger than 1 cubic foot.\n\nMinor Sensation. You chill, warm, or flavor up to 1 cubic foot of nonliving material for 1 hour.\n\nMagic Mark. You make a color, a small mark, or a symbol appear on an object or a surface for 1 hour.\n\nMinor Creation. You create a nonmagical trinket or an illusory image that can fit in your hand. It lasts until the end of your next turn. A trinket can deal no damage and has no monetary worth.",
-        "open": false
+        "open": false,
+        "sourceId": "srd-prestidigitation",
+        "source": "SRD 5.2.1",
+        "school": "Transmutation",
+        "duration": "Instantaneous",
+        "componentsText": "V",
+        "classes": "Bard, Sorcerer, Warlock, Wizard",
+        "attackSave": "",
+        "damageHealing": "",
+        "damageType": "",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": false
       },
       {
         "level": "1",
@@ -359,7 +432,19 @@
         "material": false,
         "effect": "Con save; 15/20 ft cone of 2d8 thunder and pushed 15/20 ft",
         "details": "Spell Level: 1st\nCasting Time: 1 Action\nRange/Area: Self — 15 ft. cone\nComponents: V, S\n\nDuration: Instantaneous\nSchool: Evocation\nAttack/Save: Constitution Save\nDamage/Effect: Thunder\n\nDescription\nThrough the echoes, your call for help shall be heard. A defensive spell created by the magic researchers of the Aeternia kingdom. As you cry for help, you forcefully push away those who mean you harm. However, be mindful, as sound transfers differently under water.\n\nOn Land\nEach creature within a 15 ft. cone makes a Constitution saving throw. On a failed save, they take 2d8 Thunder damage and are pushed away from you by 5 ft. On a successful save, they take half the damage and are not pushed.\n\nYour call travels over 100 ft. on land.\n\nUnder Water\nEach creature within a 20 ft. cone makes a Constitution saving throw. On a failed save, they take 2d8 Thunder damage and are pushed away from you by 15 ft. On a successful save, they take half the damage and are not pushed.\n\nYour call travels over 300 ft. through water.\n\nHigher-Level Spell Slot\nThe damage increases by 1d8 for each spell slot level above 1. ",
-        "open": false
+        "open": false,
+        "sourceId": "",
+        "source": "",
+        "school": "Homebrew",
+        "duration": "",
+        "componentsText": "",
+        "classes": "",
+        "attackSave": "",
+        "damageHealing": "",
+        "damageType": "",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": false
       },
       {
         "level": "1",
@@ -371,7 +456,19 @@
         "material": false,
         "effect": "2d4+4 healing",
         "details": "Level 1 Abjuration (Bard, Cleric, Druid)\n\nCasting Time: Bonus Action\nRange: 60 feet\nComponents: V\nDuration: Instantaneous\n\nA creature of your choice that you can see within range regains Hit Points equal to 2d4 plus your spellcasting ability modifier.\n\nUsing a Higher-Level Spell Slot. The healing increases by 2d4 for each spell slot level above 1.",
-        "open": false
+        "open": false,
+        "sourceId": "",
+        "source": "",
+        "school": "Homebrew",
+        "duration": "",
+        "componentsText": "",
+        "classes": "",
+        "attackSave": "",
+        "damageHealing": "",
+        "damageType": "",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": false
       },
       {
         "level": "1",
@@ -383,7 +480,19 @@
         "material": true,
         "effect": "Wis save; cone of 1d6 psychic damage and blinded",
         "details": "Spell Level: 1st\nCasting Time: 1 Action\nRange/Area: Self — 15 ft. cone\nComponents: V, S, M*\n*A small ring\n\nDuration: Instantaneous\nSchool: Evocation\nAttack/Save: Wisdom Save\nDamage/Effect: Psychic\n\nDescription\nYou spray a dazzling collection of mystifying bubbles from your hands. Each creature in a 15 ft. cone, originating from you, must succeed on a Wisdom saving throw or become blinded until the end of your next turn. In addition, upon a failed save, the creatures take 1d6 Psychic damage, or half as much on a successful save.\n\nNatural fires within the cone will be extinguished.\n\nHigher-Level Spell Slot\nThe damage increases by 1d6 for each spell slot level above 1.",
-        "open": false
+        "open": false,
+        "sourceId": "mb-bubble-spray",
+        "source": "Mythical Blue - The Great Depth",
+        "school": "Evocation",
+        "duration": "Instantaneous",
+        "componentsText": "V, S, M (a small ring)",
+        "classes": "Sorcerer",
+        "attackSave": "WIS Save",
+        "damageHealing": "1d6",
+        "damageType": "Psychic",
+        "areaShape": "Cone",
+        "areaSize": "15 ft",
+        "prepared": false
       },
       {
         "level": "1",
@@ -395,7 +504,19 @@
         "material": true,
         "effect": "Dex save; 3d8/3d10 cold damage and target falls prone/is pushed downward",
         "details": "Spell Level: 1st\nCasting Time: 1 Action\nRange/Area: 90 ft. — 5 ft. square\nComponents: S, M*\n*A small vial of water\n\nDuration: Instantaneous\nSchool: Conjuration\nAttack/Save: Dexterity Save\nDamage/Effect: Cold & Control\n\nDescription\nAs you spin around your vial of water, a whirlpool comes to be. Uncorking the vial will release said whirlpool upon a target within range (90 ft.). The target must make a Dexterity saving throw or experience the full effect of the spell. The effect of the spell differs depending on whether the target is on the surface or below it:\n\nOn Land\nThe target takes 3d8 cold damage and falls prone. On a successful save, the target takes half the damage and does not fall prone.\n\nUnder Water\nThe target takes 3d10 cold damage and is pushed downward by 30 ft. On a successful save, the target takes half the damage and is not pushed downward.\n\nHigher-Level Spell Slot\nFor each spell slot above level 1, an extra whirlpool is created. ",
-        "open": false
+        "open": false,
+        "sourceId": "mb-whirlpool",
+        "source": "Mythical Blue - The Great Depth",
+        "school": "Conjuration",
+        "duration": "Instantaneous",
+        "componentsText": "S, M (a small vial of water)",
+        "classes": "Sorcerer",
+        "attackSave": "DEX Save",
+        "damageHealing": "3d8 land / 3d10 underwater",
+        "damageType": "Cold & Control",
+        "areaShape": "Square",
+        "areaSize": "5 ft",
+        "prepared": false
       },
       {
         "level": "1",
@@ -407,7 +528,19 @@
         "material": false,
         "effect": "20 ft radius sphere of heavily obscured fog for 1hr.",
         "details": "Level 1 Conjuration (Druid, Ranger, Sorcerer, Wizard)\n\nCasting Time: Action\nRange: 120 feet\nComponents: V, S\nDuration: Concentration, up to 1 hour\n\nYou create a 20-foot-radius Sphere of fog centered on a point within range. The Sphere is Heavily Obscured. It lasts for the duration or until a strong wind (such as one created by Gust of Wind) disperses it.\n\nUsing a Higher-Level Spell Slot. The fog’s radius increases by 20 feet for each spell slot level above 1.",
-        "open": false
+        "open": false,
+        "sourceId": "srd-fog-cloud",
+        "source": "SRD 5.2.1",
+        "school": "Conjuration",
+        "duration": "Concentration, up to 1 hour",
+        "componentsText": "V, S",
+        "classes": "Druid, Ranger, Sorcerer, Wizard",
+        "attackSave": "",
+        "damageHealing": "",
+        "damageType": "",
+        "areaShape": "Sphere",
+        "areaSize": "20 ft radius",
+        "prepared": false
       },
       {
         "level": "1",
@@ -419,11 +552,25 @@
         "material": true,
         "effect": "AC13+Dex 8hrs. ",
         "details": "Level 1 Abjuration (Sorcerer, Wizard)\n\nCasting Time: Action\nRange: Touch\nComponents: V, S, M (a piece of cured leather)\nDuration: 8 hours\n\nYou touch a willing creature who isn’t wearing armor. Until the spell ends, the target’s base AC becomes 13 plus its Dexterity modifier. The spell ends early if the target dons armor.",
-        "open": false
+        "open": false,
+        "sourceId": "srd-mage-armor",
+        "source": "SRD 5.2.1",
+        "school": "Abjuration",
+        "duration": "8 hours",
+        "componentsText": "V, S, M (a piece of cured leather)",
+        "classes": "Sorcerer, Wizard",
+        "attackSave": "",
+        "damageHealing": "",
+        "damageType": "",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": false
       }
     ],
     "proficiencies": {
-      "armor": [],
+      "armor": [
+        "None"
+      ],
       "weapons": [
         "Simple"
       ],
@@ -431,41 +578,10 @@
         "Calligrapher's Supplies"
       ],
       "other": [
-        "Darkvision: 60ft",
-        "Swim Speed: 30ft"
+        "Darkvision: 60ft"
       ]
     },
     "journalNotes": [],
-    "gems": [],
-    "attunementSlots": [
-      {
-        "item": "",
-        "notes": ""
-      },
-      {
-        "item": "",
-        "notes": ""
-      },
-      {
-        "item": "",
-        "notes": ""
-      }
-    ],
-    "storageLocations": [
-      {
-        "id": "storage-a0f2d0e2-backpack",
-        "name": "Backpack",
-        "type": "Carried Container",
-        "notes": "Imported from the original inventory list."
-      }
-    ],
-    "equippedSlots": {
-      "mainHand": "item-a0f2d0e2-spear-1",
-      "backStorage": "item-a0f2d0e2-backpack-1",
-      "otherWorn": "item-a0f2d0e2-arcane-focus-crystal-1"
-    },
-    "customEquippedSlots": [],
-    "inventoryView": "list",
     "inventoryItems": [
       {
         "id": "item-a0f2d0e2-spear-1",
@@ -518,26 +634,6 @@
         "open": false
       },
       {
-        "id": "item-a0f2d0e2-flasks-of-oil-1",
-        "name": "Flasks of Oil",
-        "type": "consumable",
-        "qty": "2",
-        "value": "",
-        "location": "storage:storage-a0f2d0e2-backpack",
-        "details": "",
-        "open": false
-      },
-      {
-        "id": "item-a0f2d0e2-rations-1",
-        "name": "Rations",
-        "type": "consumable",
-        "qty": "10",
-        "value": "",
-        "location": "storage:storage-a0f2d0e2-backpack",
-        "details": "",
-        "open": false
-      },
-      {
         "id": "item-a0f2d0e2-rope-1",
         "name": "Rope",
         "type": "gear",
@@ -571,16 +667,6 @@
         "id": "item-a0f2d0e2-waterskin-1",
         "name": "Waterskin",
         "type": "gear",
-        "qty": "",
-        "value": "",
-        "location": "storage:storage-a0f2d0e2-backpack",
-        "details": "",
-        "open": false
-      },
-      {
-        "id": "item-a0f2d0e2-calligrapher-s-supplies-1",
-        "name": "Calligrapher's Supplies",
-        "type": "tool",
         "qty": "",
         "value": "",
         "location": "storage:storage-a0f2d0e2-backpack",
@@ -625,6 +711,36 @@
         "value": "",
         "location": "",
         "details": "Imported as a pack entry. Its contents were not expanded because the original note also listed individual carried items.",
+        "open": false
+      },
+      {
+        "id": "item-a0f2d0e2-calligrapher-s-supplies-1",
+        "name": "Calligrapher's Supplies",
+        "type": "tool",
+        "qty": "",
+        "value": "",
+        "location": "storage:storage-a0f2d0e2-backpack",
+        "details": "",
+        "open": false
+      },
+      {
+        "id": "item-a0f2d0e2-flasks-of-oil-1",
+        "name": "Flasks of Oil",
+        "type": "consumable",
+        "qty": "2",
+        "value": "",
+        "location": "storage:storage-a0f2d0e2-backpack",
+        "details": "",
+        "open": false
+      },
+      {
+        "id": "item-a0f2d0e2-rations-1",
+        "name": "Rations",
+        "type": "consumable",
+        "qty": "10",
+        "value": "",
+        "location": "storage:storage-a0f2d0e2-backpack",
+        "details": "",
         "open": false
       }
     ],
@@ -720,16 +836,6 @@
         "open": false
       },
       {
-        "id": "item-a0f2d0e2-calligrapher-s-supplies-1",
-        "name": "Calligrapher's Supplies",
-        "type": "tool",
-        "qty": "",
-        "value": "",
-        "location": "storage:storage-a0f2d0e2-backpack",
-        "details": "",
-        "open": false
-      },
-      {
         "id": "item-a0f2d0e2-fine-clothes-1",
         "name": "Fine Clothes",
         "type": "gear",
@@ -768,6 +874,16 @@
         "location": "",
         "details": "Imported as a pack entry. Its contents were not expanded because the original note also listed individual carried items.",
         "open": false
+      },
+      {
+        "id": "item-a0f2d0e2-calligrapher-s-supplies-1",
+        "name": "Calligrapher's Supplies",
+        "type": "tool",
+        "qty": "",
+        "value": "",
+        "location": "storage:storage-a0f2d0e2-backpack",
+        "details": "",
+        "open": false
       }
     ],
     "magicItems": [],
@@ -792,6 +908,58 @@
         "details": "",
         "open": false
       }
-    ]
+    ],
+    "gems": [],
+    "attunementSlots": [
+      {
+        "item": "",
+        "notes": ""
+      },
+      {
+        "item": "",
+        "notes": ""
+      },
+      {
+        "item": "",
+        "notes": ""
+      }
+    ],
+    "storageLocations": [
+      {
+        "id": "storage-a0f2d0e2-backpack",
+        "name": "Backpack",
+        "type": "Carried Container",
+        "notes": "Imported from the original inventory list."
+      }
+    ],
+    "equippedSlots": {
+      "head": "",
+      "neck": "",
+      "cape": "",
+      "armor": "",
+      "clothing": "",
+      "mainHand": "item-a0f2d0e2-spear-1",
+      "offHand": "",
+      "ring1": "",
+      "ring2": "",
+      "belt": "",
+      "glovesBracers": "",
+      "footwear": "",
+      "backStorage": "item-a0f2d0e2-backpack-1",
+      "otherWorn": "item-a0f2d0e2-arcane-focus-crystal-1"
+    },
+    "customEquippedSlots": [],
+    "inventoryView": "list",
+    "speeds": [
+      {
+        "type": "Swimming",
+        "customType": "",
+        "value": "30"
+      }
+    ],
+    "armorClass": {
+      "base": "13",
+      "modifiers": []
+    }
   }
 }
