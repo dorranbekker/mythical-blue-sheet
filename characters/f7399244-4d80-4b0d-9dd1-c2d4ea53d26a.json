@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "f7399244-4d80-4b0d-9dd1-c2d4ea53d26a",
-  "updatedAt": "2026-06-03T17:51:59.292Z",
+  "updatedAt": "2026-06-08T00:11:13.782Z",
   "summary": {
     "name": "Mara Flint",
     "armorClass": "15",
@@ -14,12 +14,12 @@
   },
   "fields": {
     "characterName": "Mara Flint",
-    "background": "Conservationist",
-    "classLevel": "Ranger",
-    "experience": "",
     "speciesRace": "Selkie",
-    "subclass": "Navigator",
+    "background": "Conservationist",
     "alignment": "chaotic neutral",
+    "level": "",
+    "class": "Ranger",
+    "subclass": "Navigator",
     "initiative": "+3",
     "speed": "30",
     "armorClass": "15",
@@ -67,12 +67,6 @@
     "persuasion": "+4",
     "hitDice": "1d10",
     "hitDiceSpent": "",
-    "copperPieces": "",
-    "silverPieces": "",
-    "electrumPieces": "",
-    "goldPieces": "41",
-    "platinumPieces": "",
-    "treasureNotes": "",
     "spellcastingAbility": "WIS",
     "spellSaveDc": "12",
     "spellAttackBonus": "+4",
@@ -89,10 +83,17 @@
     "personalityIdealsBonds": "Zodiac: Sea Seraph, Thalia\nAge: 27\n\nLoves cheese!\n\nPersonality Trait: I talk to animals as if they’re people.\n                               I collect strange treasures.\n\nIdeal: Freedom. No tide, king, or captain should decide where someone belongs.\n\nBond: I protect animals and wild places because they cannot         always protect themselves.\n\nFlaw: My curiosity gets me into trouble.\n          I get restless if I stay in one place too long.\n          Scared of small and closed of spaces",
     "appearance": "Averag height. \nLong wavy brown/red hair that is often braided with feathers and small trinkets.\nSea green eyes, and sun kissed skin. \nShe wears practical pirates clothing. Favoring practical leather and weathered fabrics over anything fancy. A fitted leather corset and belts keep her gear close, while her sleeves from her white blouse are rolled up for freedom of movement. Leather pants with some small rope wrapped around the legs and the Boots are scuffed and strapped, ready for ship decks or rocky shores alike.\nSmall treasures collected from distant shores like shells, bits of sea glass, and unusual coins hang from cords and pouches on her belt.\nA persistent seagull is often found nearby.\nAt first glance Mara appears to be a carefree pirate chasing adventure, but beneath that free-spirited exterior lies a woman deeply connected to the ocean and fiercely protective of the creatures and wild places she calls home.\nShe carries herself with confidence and there is something unmistakably wild about her",
     "languages": "Common\nAqui (lv 3)",
-    "attunement": "",
-    "equipmentInventory": "* Herbalism Kit\n* Traveler’s Clothes\n* Bedroll\n* Waterskin\n* Rations (7)\n* Rope\n* Net\n* Cheese\n* Sling\n* Sling Stones (30)\n* Arrows\n* Quiver\n* Druidic Focus (sprig of mistletoe)",
+    "journalNotes": "",
+    "copperPieces": "",
+    "silverPieces": "",
+    "electrumPieces": "",
+    "goldPieces": "41",
+    "platinumPieces": "",
+    "otherInventory": "",
     "equipment": "",
-    "otherInventory": ""
+    "equipmentInventory": "* Herbalism Kit\n* Traveler’s Clothes\n* Bedroll\n* Waterskin\n* Rations (7)\n* Rope\n* Net\n* Cheese\n* Sling\n* Sling Stones (30)\n* Arrows\n* Quiver\n* Druidic Focus (sprig of mistletoe)",
+    "treasureNotes": "",
+    "attunement": ""
   },
   "uiState": {
     "inspiration": false,
@@ -241,7 +242,19 @@
         "material": false,
         "effect": "1d6 force damage with every hit. Adv. on any Wis check to find target.",
         "details": "Level 1 Divination (Ranger)\n\nCasting Time: Bonus Action\nRange: 90 feet\nComponents: V\nDuration: Concentration, up to 1 hour\n\nYou magically mark one creature you can see within range as your quarry. Until the spell ends, you deal an extra 1d6 Force damage to the target whenever you hit it with an attack roll. You also have Advantage on any Wisdom (Perception or Survival) check you make to find it.\n\nIf the target drops to 0 Hit Points before this spell ends, you can take a Bonus Action to move the mark to a new creature you can see within range.\n\nUsing a Higher-Level Spell Slot. Your Concentration can last longer with a spell slot of level 3–4 (up to 8 hours) or 5+ (up to 24 hours).",
-        "open": false
+        "open": false,
+        "sourceId": "",
+        "source": "",
+        "school": "Homebrew",
+        "duration": "",
+        "componentsText": "",
+        "classes": "",
+        "attackSave": "",
+        "damageHealing": "",
+        "damageType": "",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": false
       },
       {
         "level": "1",
@@ -249,23 +262,47 @@
         "castTime": "Action",
         "range": "30 ft",
         "concentration": false,
-        "ritual": false,
-        "material": false,
+        "ritual": true,
+        "material": true,
         "effect": "You set an alarm against intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot Cube. Until the spell ends, an alarm alerts you whenever a creature touches or enters the warded area. When you cast the spell, you can designate creatures that won’t set off the alarm. You also choose whether the alarm is audible or mental:",
         "details": "Casting Time: 1 minute or Ritual\nRange: 30 feet\nComponents: V, S, M (a bell and silver wire)\nDuration: 8 hours\n\nYou set an alarm against intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot Cube. Until the spell ends, an alarm alerts you whenever a creature touches or enters the warded area. When you cast the spell, you can designate creatures that won’t set off the alarm. You also choose whether the alarm is audible or mental:\n\nAudible Alarm. The alarm produces the sound of a handbell for 10 seconds within 60 feet of the warded area.\n\nMental Alarm. You are alerted by a mental ping if you are within 1 mile of the warded area. This ping awakens you if you’re asleep.",
-        "open": false
+        "open": false,
+        "sourceId": "srd-alarm",
+        "source": "SRD 5.2.1",
+        "school": "Abjuration",
+        "duration": "8 hours",
+        "componentsText": "V, S, M (a bell and silver wire)",
+        "classes": "Ranger, Wizard",
+        "attackSave": "",
+        "damageHealing": "",
+        "damageType": "",
+        "areaShape": "Cube",
+        "areaSize": "20 ft",
+        "prepared": false
       },
       {
         "level": "1",
         "name": "Ensnaring strike",
         "castTime": "Bonus Action",
         "range": "Self",
-        "concentration": false,
+        "concentration": true,
         "ritual": false,
         "material": false,
         "effect": "1d6 piercing damage at the start of each turn. ",
         "details": "",
-        "open": false
+        "open": false,
+        "sourceId": "srd-ensnaring-strike",
+        "source": "SRD 5.2.1",
+        "school": "Conjuration",
+        "duration": "Concentration, up to 1 minute",
+        "componentsText": "V",
+        "classes": "Ranger",
+        "attackSave": "STR Save",
+        "damageHealing": "1d6",
+        "damageType": "Piercing",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": false
       },
       {
         "level": "",
@@ -277,7 +314,19 @@
         "material": false,
         "effect": "",
         "details": "",
-        "open": false
+        "open": false,
+        "sourceId": "",
+        "source": "",
+        "school": "Homebrew",
+        "duration": "",
+        "componentsText": "",
+        "classes": "",
+        "attackSave": "",
+        "damageHealing": "",
+        "damageType": "",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": false
       },
       {
         "level": "",
@@ -289,7 +338,19 @@
         "material": false,
         "effect": "",
         "details": "",
-        "open": false
+        "open": false,
+        "sourceId": "",
+        "source": "",
+        "school": "Homebrew",
+        "duration": "",
+        "componentsText": "",
+        "classes": "",
+        "attackSave": "",
+        "damageHealing": "",
+        "damageType": "",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": false
       },
       {
         "level": "",
@@ -301,7 +362,19 @@
         "material": false,
         "effect": "",
         "details": "",
-        "open": false
+        "open": false,
+        "sourceId": "",
+        "source": "",
+        "school": "Homebrew",
+        "duration": "",
+        "componentsText": "",
+        "classes": "",
+        "attackSave": "",
+        "damageHealing": "",
+        "damageType": "",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": false
       },
       {
         "level": "",
@@ -313,7 +386,19 @@
         "material": false,
         "effect": "",
         "details": "",
-        "open": false
+        "open": false,
+        "sourceId": "",
+        "source": "",
+        "school": "Homebrew",
+        "duration": "",
+        "componentsText": "",
+        "classes": "",
+        "attackSave": "",
+        "damageHealing": "",
+        "damageType": "",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": false
       },
       {
         "level": "",
@@ -325,7 +410,19 @@
         "material": false,
         "effect": "",
         "details": "",
-        "open": false
+        "open": false,
+        "sourceId": "",
+        "source": "",
+        "school": "Homebrew",
+        "duration": "",
+        "componentsText": "",
+        "classes": "",
+        "attackSave": "",
+        "damageHealing": "",
+        "damageType": "",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": false
       },
       {
         "level": "",
@@ -337,62 +434,38 @@
         "material": false,
         "effect": "",
         "details": "",
-        "open": false
+        "open": false,
+        "sourceId": "",
+        "source": "",
+        "school": "Homebrew",
+        "duration": "",
+        "componentsText": "",
+        "classes": "",
+        "attackSave": "",
+        "damageHealing": "",
+        "damageType": "",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": false
       }
     ],
     "proficiencies": {
       "armor": [
-        "Light & Medium & Shields"
+        "Light",
+        "Medium",
+        "Shield"
       ],
       "weapons": [
-        "Simple & Martial"
+        "Simple",
+        "Martial"
       ],
       "tools": [],
       "other": [
-        "Darkvision: 60 ft.",
-        "Speed (Swimming): 20–40 ft."
+        "Darkvision: 60 ft."
       ]
     },
     "journalNotes": [],
-    "gems": [],
-    "attunementSlots": [
-      {
-        "item": "",
-        "notes": ""
-      },
-      {
-        "item": "",
-        "notes": ""
-      },
-      {
-        "item": "",
-        "notes": ""
-      }
-    ],
-    "storageLocations": [
-      {
-        "id": "storage-f7399244-quiver",
-        "name": "Quiver",
-        "type": "Carried Container",
-        "notes": "Used for arrows."
-      }
-    ],
-    "equippedSlots": {
-      "backStorage": "item-f7399244-quiver-1"
-    },
-    "customEquippedSlots": [],
-    "inventoryView": "list",
     "inventoryItems": [
-      {
-        "id": "item-f7399244-herbalism-kit-1",
-        "name": "Herbalism Kit",
-        "type": "tool",
-        "qty": "",
-        "value": "",
-        "location": "",
-        "details": "",
-        "open": false
-      },
       {
         "id": "item-f7399244-traveler-s-clothes-1",
         "name": "Traveler’s Clothes",
@@ -417,6 +490,86 @@
         "id": "item-f7399244-waterskin-1",
         "name": "Waterskin",
         "type": "gear",
+        "qty": "",
+        "value": "",
+        "location": "",
+        "details": "",
+        "open": false
+      },
+      {
+        "id": "item-f7399244-rope-1",
+        "name": "Rope",
+        "type": "gear",
+        "qty": "",
+        "value": "",
+        "location": "",
+        "details": "",
+        "open": false
+      },
+      {
+        "id": "item-f7399244-net-1",
+        "name": "Net",
+        "type": "gear",
+        "qty": "",
+        "value": "",
+        "location": "",
+        "details": "",
+        "open": false
+      },
+      {
+        "id": "item-f7399244-sling-1",
+        "name": "Sling",
+        "type": "gear",
+        "qty": "",
+        "value": "",
+        "location": "",
+        "details": "",
+        "open": false
+      },
+      {
+        "id": "item-f7399244-sling-stones-1",
+        "name": "Sling Stones",
+        "type": "gear",
+        "qty": "30",
+        "value": "",
+        "location": "",
+        "details": "",
+        "open": false
+      },
+      {
+        "id": "item-f7399244-arrows-1",
+        "name": "Arrows",
+        "type": "gear",
+        "qty": "",
+        "value": "",
+        "location": "storage:storage-f7399244-quiver",
+        "details": "",
+        "open": false
+      },
+      {
+        "id": "item-f7399244-quiver-1",
+        "name": "Quiver",
+        "type": "gear",
+        "qty": "",
+        "value": "",
+        "location": "worn",
+        "details": "",
+        "open": false
+      },
+      {
+        "id": "item-f7399244-druidic-focus-sprig-of-mistletoe-1",
+        "name": "Druidic Focus (sprig of mistletoe)",
+        "type": "gear",
+        "qty": "",
+        "value": "",
+        "location": "",
+        "details": "",
+        "open": false
+      },
+      {
+        "id": "item-f7399244-herbalism-kit-1",
+        "name": "Herbalism Kit",
+        "type": "tool",
         "qty": "",
         "value": "",
         "location": "",
@@ -434,26 +587,6 @@
         "open": false
       },
       {
-        "id": "item-f7399244-rope-1",
-        "name": "Rope",
-        "type": "gear",
-        "qty": "",
-        "value": "",
-        "location": "",
-        "details": "",
-        "open": false
-      },
-      {
-        "id": "item-f7399244-net-1",
-        "name": "Net",
-        "type": "gear",
-        "qty": "",
-        "value": "",
-        "location": "",
-        "details": "",
-        "open": false
-      },
-      {
         "id": "item-f7399244-cheese-1",
         "name": "Cheese",
         "type": "consumable",
@@ -462,69 +595,9 @@
         "location": "",
         "details": "",
         "open": false
-      },
-      {
-        "id": "item-f7399244-sling-1",
-        "name": "Sling",
-        "type": "gear",
-        "qty": "",
-        "value": "",
-        "location": "",
-        "details": "",
-        "open": false
-      },
-      {
-        "id": "item-f7399244-sling-stones-1",
-        "name": "Sling Stones",
-        "type": "gear",
-        "qty": "30",
-        "value": "",
-        "location": "",
-        "details": "",
-        "open": false
-      },
-      {
-        "id": "item-f7399244-arrows-1",
-        "name": "Arrows",
-        "type": "gear",
-        "qty": "",
-        "value": "",
-        "location": "storage:storage-f7399244-quiver",
-        "details": "",
-        "open": false
-      },
-      {
-        "id": "item-f7399244-quiver-1",
-        "name": "Quiver",
-        "type": "gear",
-        "qty": "",
-        "value": "",
-        "location": "worn",
-        "details": "",
-        "open": false
-      },
-      {
-        "id": "item-f7399244-druidic-focus-sprig-of-mistletoe-1",
-        "name": "Druidic Focus (sprig of mistletoe)",
-        "type": "gear",
-        "qty": "",
-        "value": "",
-        "location": "",
-        "details": "",
-        "open": false
       }
     ],
     "inventoryEquipment": [
-      {
-        "id": "item-f7399244-herbalism-kit-1",
-        "name": "Herbalism Kit",
-        "type": "tool",
-        "qty": "",
-        "value": "",
-        "location": "",
-        "details": "",
-        "open": false
-      },
       {
         "id": "item-f7399244-traveler-s-clothes-1",
         "name": "Traveler’s Clothes",
@@ -619,6 +692,16 @@
         "id": "item-f7399244-druidic-focus-sprig-of-mistletoe-1",
         "name": "Druidic Focus (sprig of mistletoe)",
         "type": "gear",
+        "qty": "",
+        "value": "",
+        "location": "",
+        "details": "",
+        "open": false
+      },
+      {
+        "id": "item-f7399244-herbalism-kit-1",
+        "name": "Herbalism Kit",
+        "type": "tool",
         "qty": "",
         "value": "",
         "location": "",
@@ -648,6 +731,63 @@
         "details": "",
         "open": false
       }
-    ]
+    ],
+    "gems": [],
+    "attunementSlots": [
+      {
+        "item": "",
+        "notes": ""
+      },
+      {
+        "item": "",
+        "notes": ""
+      },
+      {
+        "item": "",
+        "notes": ""
+      }
+    ],
+    "storageLocations": [
+      {
+        "id": "storage-f7399244-quiver",
+        "name": "Quiver",
+        "type": "Carried Container",
+        "notes": "Used for arrows."
+      }
+    ],
+    "equippedSlots": {
+      "head": "",
+      "neck": "",
+      "cape": "",
+      "armor": "",
+      "clothing": "",
+      "mainHand": "",
+      "offHand": "",
+      "ring1": "",
+      "ring2": "",
+      "belt": "",
+      "glovesBracers": "",
+      "footwear": "",
+      "backStorage": "item-f7399244-quiver-1",
+      "otherWorn": ""
+    },
+    "customEquippedSlots": [],
+    "inventoryView": "list",
+    "speeds": [
+      {
+        "type": "Swimming",
+        "customType": "",
+        "value": "20"
+      },
+      {
+        "type": "Swimming",
+        "customType": "",
+        "value": "40"
+      }
+    ],
+    "armorClass": {
+      "base": "15",
+      "modifiers": []
+    }
   }
 }
