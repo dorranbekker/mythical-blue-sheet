@@ -1759,3 +1759,516 @@
     width: 70px;
   }
 }
+
+/* ─── FEATURES & TRAITS — SEARCH, CATEGORY AND SORT CONTROLS ───────────── */
+.feature-browser-toolbar {
+  display: grid;
+  grid-template-columns: minmax(180px, 1.6fr) minmax(135px, .8fr) minmax(135px, .8fr) auto;
+  gap: 8px;
+  align-items: end;
+  padding: 10px 10px 6px;
+  border-bottom: 1px dotted rgba(184,144,44,.52);
+  background: rgba(255,253,245,.10);
+}
+
+.feature-browser-toolbar label {
+  min-width: 0;
+}
+
+.feature-browser-toolbar label > span,
+.feature-category-row label,
+.feature-filter-count {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--gold-deep);
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.feature-browser-toolbar input,
+.feature-browser-toolbar select,
+.feature-category-row select {
+  width: 100%;
+  min-width: 0;
+  min-height: 31px;
+  border: 1px solid rgba(184,144,44,.68);
+  background: rgba(255,253,245,.36);
+  color: var(--ink);
+  font-family: var(--small-italic-font);
+  font-size: 12px;
+  padding: 5px 7px;
+  outline: none;
+}
+
+.feature-browser-toolbar input:focus,
+.feature-browser-toolbar select:focus,
+.feature-category-row select:focus {
+  border-color: var(--navy);
+  background: rgba(255,253,245,.58);
+}
+
+.feature-filter-clear {
+  min-height: 31px;
+  border: 1px solid var(--gold-deep);
+  background: rgba(255,253,245,.20);
+  color: var(--navy-deep);
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .7px;
+  padding: 6px 9px;
+  text-transform: uppercase;
+}
+
+.feature-filter-clear:hover,
+.feature-filter-clear:focus-visible {
+  background: rgba(214,168,56,.14);
+  outline: none;
+}
+
+.feature-filter-count {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: rgba(28,39,80,.62);
+  letter-spacing: .7px;
+}
+
+.feature-category-row {
+  display: grid;
+  grid-template-columns: auto minmax(150px, 240px);
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.feature-category-row label {
+  margin: 0;
+}
+
+.feature-entry[hidden] {
+  display: none !important;
+}
+
+/* ─── DEFENSES ─────────────────────────────────────────────────────────── */
+.defenses-card {
+  margin-top: 12px;
+}
+
+.defense-type-cell {
+  width: 42%;
+}
+
+@media (max-width: 768px) {
+  .feature-browser-toolbar {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .feature-filter-search {
+    grid-column: 1 / -1;
+  }
+
+  .feature-filter-clear {
+    justify-self: start;
+  }
+
+  .feature-browser-toolbar input,
+  .feature-browser-toolbar select,
+  .feature-category-row select {
+    min-height: 36px;
+    font-size: 16px;
+  }
+
+  .feature-category-row {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+
+  .defenses-card {
+    order: 9;
+    grid-column: 1 / -1;
+  }
+
+  .main-equipment-card {
+    order: 10;
+  }
+
+  .rp > .features-traits-main {
+    order: 11;
+  }
+}
+
+@media (max-width: 420px) {
+  .defenses-card {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ─── FEATURES & TRAITS — STABLE COMPACT META ROW ─────────────────────── */
+.feature-entry {
+  padding: 9px;
+  border-color: rgba(184,144,44,.62);
+  background: rgba(255,253,245,.22);
+}
+
+.feature-entry-top {
+  grid-template-columns: minmax(145px, .9fr) minmax(0, 1.75fr);
+  gap: 8px;
+}
+
+.feature-entry-footer {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  margin-top: 7px;
+  padding-top: 7px;
+  border-top: 1px dotted rgba(184,144,44,.42);
+}
+
+.feature-details-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3px;
+  min-width: 74px;
+  padding: 3px 0;
+  border: none;
+  background: transparent;
+  color: var(--navy-deep);
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .75px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.feature-details-toggle:hover,
+.feature-details-toggle:focus-visible {
+  color: var(--gold-deep);
+  outline: none;
+}
+
+.feature-details-toggle-icon {
+  display: inline-block;
+  width: 9px;
+  color: var(--gold-deep);
+  font-size: 9px;
+  line-height: 1;
+  text-align: center;
+}
+
+.feature-category-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.feature-category-label {
+  color: rgba(28,39,80,.62);
+  font-family: 'Cinzel', serif;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: .9px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.feature-category-select {
+  width: auto;
+  max-width: 210px;
+  min-width: 0;
+  min-height: 24px;
+  border: none;
+  border-bottom: 1px dotted rgba(184,144,44,.56);
+  background: transparent;
+  color: var(--navy-deep);
+  font-family: var(--small-italic-font);
+  font-size: 11px;
+  font-style: italic;
+  padding: 2px 20px 2px 3px;
+  outline: none;
+}
+
+.feature-category-select:hover,
+.feature-category-select:focus {
+  border-bottom-color: var(--navy);
+  background: rgba(255,253,245,.22);
+}
+
+.feature-entry-footer .feature-resource-area {
+  justify-self: end;
+}
+
+.feature-details-panel {
+  grid-column: 1 / -1;
+  min-width: 0;
+  padding-top: 1px;
+}
+
+.feature-details-panel[hidden] {
+  display: none !important;
+}
+
+.feature-details-panel textarea {
+  width: 100%;
+  margin-top: 6px;
+}
+
+/* The earlier category row was replaced by the compact footer control. */
+.feature-category-row { display: none !important; }
+
+/* ─── DEFENSES — KEEP LONG LABELS AND + BUTTONS VISIBLE ───────────────── */
+.defense-type-cell {
+  width: 52%;
+  padding: 6px 5px 6px 7px;
+}
+
+.defense-type-cell .proficiency-type-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 18px;
+  gap: 4px;
+  align-items: center;
+}
+
+.defense-type-cell .proficiency-type-label {
+  min-width: 0;
+  overflow: visible;
+  font-size: 6.6px;
+  letter-spacing: .45px;
+  white-space: nowrap;
+}
+
+.defense-type-cell .proficiency-add-row {
+  justify-self: end;
+  width: 18px;
+  height: 18px;
+}
+
+.defense-table .proficiency-values-cell {
+  padding-left: 4px;
+  padding-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .feature-entry-top {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-entry-footer {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 7px;
+  }
+
+  .feature-details-toggle {
+    min-width: 68px;
+  }
+
+  .feature-category-control {
+    min-width: 0;
+  }
+
+  .feature-category-select {
+    max-width: min(100%, 220px);
+    min-height: 29px;
+    font-size: 13px;
+  }
+
+  .feature-entry-footer .feature-resource-area,
+  .feature-details-panel {
+    grid-column: 1 / -1;
+  }
+
+  .feature-entry-footer .feature-resource-area {
+    justify-self: start;
+  }
+
+  .defense-type-cell {
+    width: 54%;
+  }
+
+  .defense-type-cell .proficiency-type-label {
+    font-size: 6.2px;
+    letter-spacing: .32px;
+  }
+}
+
+/* ─── DEFENSES — LEFT-ALIGNED LABELS WITH ROOMIER VALUE INPUTS ────────── */
+.defense-type-cell {
+  width: 40%;
+  padding: 7px 4px 7px 7px;
+  text-align: left;
+}
+
+.defense-type-cell .proficiency-type-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+}
+
+.defense-type-cell .proficiency-type-label {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: visible;
+  color: var(--navy-deep);
+  font-size: 7.6px;
+  letter-spacing: .5px;
+  line-height: 1.2;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.defense-type-cell .proficiency-add-row {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+.defense-table .proficiency-values-cell {
+  width: 60%;
+  padding: 4px 6px 4px 2px;
+}
+
+@media (max-width: 768px) {
+  .defense-type-cell {
+    width: 42%;
+    padding-left: 6px;
+  }
+
+  .defense-type-cell .proficiency-type-label {
+    font-size: 7.2px;
+    letter-spacing: .38px;
+  }
+
+  .defense-table .proficiency-values-cell {
+    width: 58%;
+  }
+}
+
+/* ─── DEFENSES — FIXED + BUTTON COLUMN ─────────────────────────────────
+   Keep the three add buttons vertically aligned, like Proficiencies.
+   The label column is fixed so the long Vulnerabilities label can never
+   push its + button into the value input. */
+.defense-type-cell {
+  width: 44%;
+  padding: 7px 4px 7px 7px;
+}
+
+.defense-type-cell .proficiency-type-wrap {
+  display: grid;
+  grid-template-columns: 108px 18px;
+  column-gap: 8px;
+  align-items: center;
+  justify-content: start;
+  width: max-content;
+  max-width: 100%;
+}
+
+.defense-type-cell .proficiency-type-label {
+  min-width: 0;
+  overflow: visible;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.defense-type-cell .proficiency-add-row {
+  justify-self: start;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+.defense-table .proficiency-values-cell {
+  width: 56%;
+  padding: 4px 6px 4px 2px;
+}
+
+@media (max-width: 768px) {
+  .defense-type-cell {
+    width: 46%;
+    padding-left: 6px;
+  }
+
+  .defense-type-cell .proficiency-type-wrap {
+    grid-template-columns: 102px 18px;
+    column-gap: 7px;
+  }
+
+  .defense-table .proficiency-values-cell {
+    width: 54%;
+  }
+}
+
+/* ─── DEFENSES — FINAL SAFE + COLUMN ALIGNMENT ──────────────────────────
+   Keep each add button fully inside the left table cell. The flexible label
+   column absorbs the available width, while the fixed 18px button column
+   aligns vertically across Resistances, Immunities and Vulnerabilities. */
+.defense-type-cell {
+  width: 46%;
+  padding: 7px 5px 7px 7px;
+  overflow: hidden;
+}
+
+.defense-type-cell .proficiency-type-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 18px;
+  column-gap: 7px;
+  align-items: center;
+  width: 100%;
+  max-width: none;
+}
+
+.defense-type-cell .proficiency-type-label {
+  min-width: 0;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+.defense-type-cell .proficiency-add-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  width: 18px;
+  min-width: 18px;
+  max-width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  flex: 0 0 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.defense-table .proficiency-values-cell {
+  width: 54%;
+  padding: 4px 6px 4px 3px;
+}
+
+@media (max-width: 768px) {
+  .defense-type-cell {
+    width: 47%;
+    padding-left: 6px;
+  }
+
+  .defense-type-cell .proficiency-type-wrap {
+    grid-template-columns: minmax(0, 1fr) 18px;
+    column-gap: 6px;
+  }
+
+  .defense-table .proficiency-values-cell {
+    width: 53%;
+  }
+}
