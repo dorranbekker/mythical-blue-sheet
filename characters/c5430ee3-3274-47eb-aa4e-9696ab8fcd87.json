@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "c5430ee3-3274-47eb-aa4e-9696ab8fcd87",
-  "updatedAt": "2026-06-10T16:27:56.967Z",
+  "updatedAt": "2026-06-10T16:30:13.539Z",
   "summary": {
     "name": "Vasir Serpentis",
     "armorClass": "14",
@@ -184,16 +184,16 @@
         "notes": "Finesse"
       },
       {
-        "name": "True strike",
+        "name": "Poison Spray",
         "atk": "+6",
-        "damage": "1d6 + 4 Radiant",
+        "damage": "1d12 poison",
         "notes": ""
       },
       {
-        "name": "",
-        "atk": "",
-        "damage": "",
-        "notes": ""
+        "name": "Ray of Frost",
+        "atk": "+6",
+        "damage": "1d8 cold",
+        "notes": "10ft reduced speed"
       },
       {
         "name": "",
@@ -349,30 +349,6 @@
         "attackSave": "Spell Attack",
         "damageHealing": "1d12 / 2d12 / 3d12",
         "damageType": "Poison",
-        "areaShape": "",
-        "areaSize": "",
-        "prepared": true
-      },
-      {
-        "level": "C",
-        "name": "Ray of Frost",
-        "castTime": "Action",
-        "range": "60 feet",
-        "concentration": false,
-        "ritual": false,
-        "material": false,
-        "effect": "A frigid beam of blue-white light streaks toward a creature within range.",
-        "details": "A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 Cold damage, and its Speed is reduced by 10 feet until the start of your next turn.\n\nCantrip Upgrade. The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).",
-        "open": false,
-        "sourceId": "srd-ray-of-frost",
-        "source": "SRD 5.2.1",
-        "school": "Evocation",
-        "duration": "Instantaneous",
-        "componentsText": "V, S",
-        "classes": "Sorcerer, Wizard",
-        "attackSave": "Spell Attack",
-        "damageHealing": "1d8 / 2d8 / 3d8",
-        "damageType": "Cold",
         "areaShape": "",
         "areaSize": "",
         "prepared": true
@@ -541,6 +517,30 @@
         "attackSave": "Spell Attack",
         "damageHealing": "3d8 / 1d8",
         "damageType": "",
+        "areaShape": "",
+        "areaSize": "",
+        "prepared": true
+      },
+      {
+        "level": "C",
+        "name": "Ray of Frost",
+        "castTime": "Action",
+        "range": "60 feet",
+        "concentration": false,
+        "ritual": false,
+        "material": false,
+        "effect": "A frigid beam of blue-white light streaks toward a creature within range.",
+        "details": "A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 Cold damage, and its Speed is reduced by 10 feet until the start of your next turn.\n\nCantrip Upgrade. The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).",
+        "open": false,
+        "sourceId": "srd-ray-of-frost",
+        "source": "SRD 5.2.1",
+        "school": "Evocation",
+        "duration": "Instantaneous",
+        "componentsText": "V, S",
+        "classes": "Sorcerer, Wizard",
+        "attackSave": "Spell Attack",
+        "damageHealing": "1d8 / 2d8 / 3d8",
+        "damageType": "Cold",
         "areaShape": "",
         "areaSize": "",
         "prepared": true
