@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "a0f2d0e2-3dc5-46ab-9b65-8ce9d0e8b5f1",
-  "updatedAt": "2026-06-10T07:51:32.463Z",
+  "updatedAt": "2026-06-12T20:37:27.643Z",
   "summary": {
     "name": "Nimue",
     "armorClass": "13",
@@ -645,6 +645,16 @@
         "open": false
       },
       {
+        "id": "magic-84b5ad1a-0ced-4f3b-93b2-80bb74580776",
+        "name": "Bead of Nourishment",
+        "type": "magic",
+        "qty": "1",
+        "value": "Common",
+        "location": "storage:storage-a0f2d0e2-backpack",
+        "details": "Magic Item · Common\n\nWondrous Item, Common\n\nThis flavorless, gelatinous bead dissolves on your tongue and provides as much nourishment as 1 day of Rations.\n\nSource: SRD 5.2.1",
+        "open": false
+      },
+      {
         "id": "item-a0f2d0e2-book-about-thalassic-mythology-1",
         "name": "Book about Thalassic Mythology",
         "type": "gear",
@@ -907,7 +917,18 @@
         "open": false
       }
     ],
-    "magicItems": [],
+    "magicItems": [
+      {
+        "id": "magic-84b5ad1a-0ced-4f3b-93b2-80bb74580776",
+        "name": "Bead of Nourishment",
+        "type": "magic",
+        "qty": "1",
+        "value": "Common",
+        "location": "storage:storage-a0f2d0e2-backpack",
+        "details": "Magic Item · Common\n\nWondrous Item, Common\n\nThis flavorless, gelatinous bead dissolves on your tongue and provides as much nourishment as 1 day of Rations.\n\nSource: SRD 5.2.1",
+        "open": false
+      }
+    ],
     "consumables": [
       {
         "id": "item-a0f2d0e2-flasks-of-oil-1",
