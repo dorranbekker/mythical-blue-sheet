@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "a0f2d0e2-3dc5-46ab-9b65-8ce9d0e8b5f1",
-  "updatedAt": "2026-06-12T20:37:27.643Z",
+  "updatedAt": "2026-06-13T21:15:15.229Z",
   "summary": {
     "name": "Nimue",
     "armorClass": "13",
@@ -775,6 +775,16 @@
         "open": false
       },
       {
+        "id": "gear-15bfc7d0-0fba-4119-a894-e8e354bef74e",
+        "name": "Vial of Water?",
+        "type": "consumable",
+        "qty": "3",
+        "value": "",
+        "location": "storage:storage-a0f2d0e2-backpack",
+        "details": "",
+        "open": false
+      },
+      {
         "id": "item-a0f2d0e2-waterskin-1",
         "name": "Waterskin",
         "type": "gear",
@@ -948,6 +958,16 @@
         "value": "5 SP",
         "location": "storage:storage-a0f2d0e2-backpack",
         "details": "Adventuring Gear · Weight: 2 lb.\n\nRations consist of travelready food, including jerky, dried fruit, hardtack, and nuts. See “Malnutrition” in “Rules Glossary” for the risks of not eating.\n\nSource: SRD 5.2.1",
+        "open": false
+      },
+      {
+        "id": "gear-15bfc7d0-0fba-4119-a894-e8e354bef74e",
+        "name": "Vial of Water?",
+        "type": "consumable",
+        "qty": "3",
+        "value": "",
+        "location": "storage:storage-a0f2d0e2-backpack",
+        "details": "",
         "open": false
       }
     ],
