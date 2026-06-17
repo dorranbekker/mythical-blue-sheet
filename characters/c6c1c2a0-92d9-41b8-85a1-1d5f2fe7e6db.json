@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "c6c1c2a0-92d9-41b8-85a1-1d5f2fe7e6db",
-  "updatedAt": "2026-06-17T16:30:50.407Z",
+  "updatedAt": "2026-06-17T16:32:25.006Z",
   "summary": {
     "name": "Lillith",
     "armorClass": "15",
@@ -599,7 +599,9 @@
       ]
     },
     "defenses": {
-      "resistances": [],
+      "resistances": [
+        "Necrotic"
+      ],
       "immunities": [],
       "vulnerabilities": []
     },
