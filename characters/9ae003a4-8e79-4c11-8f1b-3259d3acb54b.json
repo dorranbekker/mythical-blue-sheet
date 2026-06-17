@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "9ae003a4-8e79-4c11-8f1b-3259d3acb54b",
-  "updatedAt": "2026-06-17T17:14:25.446Z",
+  "updatedAt": "2026-06-17T20:10:38.286Z",
   "summary": {
     "name": "Crowley2",
     "armorClass": "15",
@@ -19,7 +19,7 @@
     "alignment": "Chaotic Good",
     "level": "2",
     "class": "Bard",
-    "subclass": "",
+    "subclass": "-",
     "initiative": "+6",
     "speed": "30",
     "armorClass": "15",
@@ -143,7 +143,7 @@
   "customLists": {
     "feats": [
       {
-        "name": "Bardic Inspiration (Class)",
+        "name": "Bardic Inspiration",
         "short": "1 creature receives 1d6 for D20 Test.",
         "hasResource": true,
         "resource": "(3/4) 4/1 Long Rest",
@@ -155,7 +155,7 @@
       },
       {
         "name": "Darkvision",
-        "short": "Yay not a human",
+        "short": "Yay, not a human",
         "hasResource": false,
         "resource": "",
         "details": "D-d-d-d-darkness!",
@@ -166,7 +166,7 @@
       },
       {
         "name": "Reactive",
-        "short": "+PB to Initiative",
+        "short": "Kill, Kill, Kill!",
         "hasResource": false,
         "resource": "",
         "details": "Your survival instincts sharpen your reflexes- add PB to Initiative (+2 at Level 1). ",
@@ -177,7 +177,7 @@
       },
       {
         "name": "Poison Resilience",
-        "short": "Resilience to poison.",
+        "short": "Stay toxic, King!",
         "hasResource": false,
         "resource": "",
         "details": "Advantage on saving throws to avoid or end the poisoned condition, plus resistance to poison damage.",
