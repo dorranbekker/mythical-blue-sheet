@@ -12,9 +12,9 @@ The same `js/storage-config.js` file works in both environments:
 GitHub Pages / localhost
 -> browser localStorage test data
 
-Netlify production
--> shared Netlify Functions
--> GitHub character JSON files
+Local server
+-> shared /api filesystem handlers
+-> public/characters and public/campaign JSON files
 ```
 
 This prevents an accidental repository copy from silently switching production into localStorage mode.
@@ -47,7 +47,7 @@ css/
 js/
   conditions.js              condition reference data
   storage-config.js          automatic environment detection
-  storage-adapter.js         localStorage / Netlify abstraction
+  storage-adapter.js         localStorage / API abstraction
 
   core.js                    schema, migrations, load/save, navigation
   tables.js                  weapons and spells
@@ -63,13 +63,10 @@ js/
   calendar.js                Materra calendar behavior
   accessibility.js           font-size controls
 
-netlify/
-  functions/
-    get-character-index.js
-    get-character.js
-    save-character.js
-    save-character-status.js
-    delete-character.js
+api/
+  characters
+  campaign-state
+  custom-statblocks
 ```
 
 ## Save Structure
@@ -79,7 +76,7 @@ Character JSON remains backwards compatible. No character migration is required 
 Frequently changing values are saved through:
 
 ```text
-netlify/functions/save-character-status.js
+/api/characters/:id/status
 ```
 
 This handles:
@@ -233,7 +230,7 @@ SRD picker entries can be previewed before adding them. Imported entries remain 
 ### Preserved Production-Only Files
 
 - `srd-spells.json`
-- `netlify/functions/save-hp.js`
+- `/api/characters/:id/status`
 - `characters/*`
 - `campaign/*`
 
@@ -247,8 +244,7 @@ Upload these files over the latest production repository. This package contains 
 - `css/dm-screen.css`
 - `js/dm-screen.js`
 - `data/custom-statblocks.json`
-- `netlify/functions/get-custom-statblocks.js`
-- `netlify/functions/save-custom-statblocks.js`
+- `/api/custom-statblocks`
 
 ### What This Adds
 
@@ -262,11 +258,11 @@ Upload these files over the latest production repository. This package contains 
 - Saving throw proficiency and skill proficiency/expertise support in the builder.
 - Description field shown inside the statblock, not on the initiative tracker.
 - Action line-break parsing so entries such as Scimitar and Crossbow (light) render as separate action blocks.
-- Campaign-wide saved custom monsters through Netlify functions.
+- Campaign-wide saved custom monsters through local API routes.
 
 ### Production Saving Requirement
 
-The new Netlify functions use the same GitHub API pattern as the existing live HP save function. Production needs these environment variables configured:
+The previous GitHub-backed functions used the same GitHub API pattern as the existing live HP save function. That backend is now replaced locally, but the production repository still needs these environment variables if it keeps any GitHub-backed sync path:
 
 - `GITHUB_TOKEN`
 - `GITHUB_REPO`
@@ -277,7 +273,7 @@ Custom campaign monsters are saved to `campaign/custom-statblocks.json` in the G
 ### Validation Performed
 
 - JavaScript syntax check passed for `dm-screen.js`.
-- JavaScript syntax check passed for both new Netlify functions.
+- JavaScript syntax check passed for the API handlers and client code.
 - JSON files parse correctly.
 - `dm-screen.html` local references resolve.
 - No character files are included.

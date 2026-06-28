@@ -1,6 +1,6 @@
 // Mythical Blue · environment-aware storage configuration
-// GitHub Pages and local previews use browser-local test data.
-// Netlify production uses shared Netlify Functions.
+// GitHub Pages uses browser-local test data.
+// Local server mode uses shared /api filesystem handlers.
 
 (() => {
   const hostname = window.location.hostname;
@@ -11,7 +11,7 @@
     hostname.endsWith(".github.io");
 
   window.APP_CONFIG = {
-    storageMode: isLocalTestEnvironment ? "local" : "netlify",
+    storageMode: isLocalTestEnvironment ? "local" : "api",
     localStorageKey: "mythicalBlueSheetTestCharactersV2",
     seedIndexUrl: "characters/test-character-index.json"
   };
