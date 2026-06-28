@@ -11,6 +11,8 @@ import (
 	"sort"
 	"strings"
 	"time"
+
+	spaces "raperonzolo/character-sheet/pkg/s3"
 )
 
 var safeID = regexp.MustCompile(`^[a-zA-Z0-9_-]+$`)
@@ -19,19 +21,36 @@ const maxJSONBytes int64 = 5 * 1024 * 1024
 const maxCharacterCount = 50
 
 type apiHandler struct {
-	publicDir string
+	publicDir   string
+	storageMode string
+	spaces      *spaces.Client
 }
 
 type apiError struct {
 	Error string `json:"error"`
 }
 
-func NewAPIHandler(publicDir string) http.Handler {
-	return apiHandler{publicDir: publicDir}
+func NewAPIHandler(publicDir string) (http.Handler, error) {
+	mode := strings.TrimSpace(strings.ToLower(os.Getenv("MYTHICAL_BLUE_STORAGE_MODE")))
+	if mode == "" {
+		mode = "api"
+	}
+
+	h := apiHandler{publicDir: publicDir, storageMode: mode}
+	if mode == "s3" {
+		client, err := spaces.NewFromEnv()
+		if err != nil {
+			return nil, err
+		}
+		h.spaces = client
+	}
+
+	return h, nil
 }
 
 func (h apiHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	setJSONHeaders(w)
+	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Cache-Control", "no-store")
 
 	switch {
 	case r.URL.Path == "/api/characters" && r.Method == http.MethodGet:
@@ -83,6 +102,11 @@ func (h apiHandler) handleCharacterSubroute(w http.ResponseWriter, r *http.Reque
 }
 
 func (h apiHandler) handleListCharacters(w http.ResponseWriter, _ *http.Request) {
+	if h.storageMode == "s3" {
+		h.handleListCharactersS3(w)
+		return
+	}
+
 	entries, err := os.ReadDir(filepath.Join(h.publicDir, "characters"))
 	if err != nil {
 		writeJSON(w, http.StatusOK, []characterIndexEntry{})
@@ -110,15 +134,15 @@ func (h apiHandler) handleListCharacters(w http.ResponseWriter, _ *http.Request)
 		}
 
 		entriesByName = append(entriesByName, characterIndexEntry{
-			ID:                 character.ID,
-			Name:               fallback(character.Summary.Name, "Unnamed Character"),
-			ArmorClass:         character.Summary.ArmorClass,
-			HpCurrent:          character.Summary.HpCurrent,
-			HpMax:              character.Summary.HpMax,
-			PassivePerception:  character.Summary.PassivePerception,
-			CurrentConditions:  character.Summary.CurrentConditions,
-			File:               filepath.ToSlash(filepath.Join("characters", entry.Name())),
-			UpdatedAt:          character.UpdatedAt,
+			ID:                character.ID,
+			Name:              fallback(character.Summary.Name, "Unnamed Character"),
+			ArmorClass:        character.Summary.ArmorClass,
+			HpCurrent:         character.Summary.HpCurrent,
+			HpMax:             character.Summary.HpMax,
+			PassivePerception: character.Summary.PassivePerception,
+			CurrentConditions: character.Summary.CurrentConditions,
+			File:              filepath.ToSlash(filepath.Join("characters", entry.Name())),
+			UpdatedAt:         character.UpdatedAt,
 		})
 	}
 
@@ -130,6 +154,11 @@ func (h apiHandler) handleListCharacters(w http.ResponseWriter, _ *http.Request)
 }
 
 func (h apiHandler) handleGetCharacter(w http.ResponseWriter, characterID string) {
+	if h.storageMode == "s3" {
+		h.handleGetCharacterS3(w, characterID)
+		return
+	}
+
 	characterPath := filepath.Join(h.publicDir, "characters", characterID+".json")
 	raw, err := os.ReadFile(characterPath)
 	if err != nil {
@@ -152,6 +181,11 @@ func (h apiHandler) handleGetCharacter(w http.ResponseWriter, characterID string
 }
 
 func (h apiHandler) handleSaveCharacter(w http.ResponseWriter, r *http.Request) {
+	if h.storageMode == "s3" {
+		h.handleSaveCharacterS3(w, r)
+		return
+	}
+
 	body, err := readJSONBody(w, r)
 	if err != nil {
 		writeJSON(w, http.StatusBadRequest, apiError{Error: err.Error()})
@@ -222,6 +256,11 @@ func (h apiHandler) handleSaveCharacter(w http.ResponseWriter, r *http.Request) 
 }
 
 func (h apiHandler) handleSaveCharacterStatus(w http.ResponseWriter, r *http.Request, characterID string) {
+	if h.storageMode == "s3" {
+		h.handleSaveCharacterStatusS3(w, r, characterID)
+		return
+	}
+
 	body, err := readJSONBody(w, r)
 	if err != nil {
 		writeJSON(w, http.StatusBadRequest, apiError{Error: err.Error()})
@@ -276,6 +315,11 @@ func (h apiHandler) handleSaveCharacterStatus(w http.ResponseWriter, r *http.Req
 }
 
 func (h apiHandler) handleDeleteCharacter(w http.ResponseWriter, r *http.Request, characterID string) {
+	if h.storageMode == "s3" {
+		h.handleDeleteCharacterS3(w, r, characterID)
+		return
+	}
+
 	body, err := readJSONBody(w, r)
 	if err != nil {
 		writeJSON(w, http.StatusBadRequest, apiError{Error: err.Error()})
@@ -312,6 +356,11 @@ func (h apiHandler) handleDeleteCharacter(w http.ResponseWriter, r *http.Request
 }
 
 func (h apiHandler) handleCampaignState(w http.ResponseWriter, r *http.Request) {
+	if h.storageMode == "s3" {
+		h.handleCampaignStateS3(w, r)
+		return
+	}
+
 	path := filepath.Join(h.publicDir, "campaign", "campaign-state.json")
 
 	switch r.Method {
@@ -379,6 +428,11 @@ func (h apiHandler) handleCampaignState(w http.ResponseWriter, r *http.Request) 
 }
 
 func (h apiHandler) handleCustomStatblocks(w http.ResponseWriter, r *http.Request) {
+	if h.storageMode == "s3" {
+		h.handleCustomStatblocksS3(w, r)
+		return
+	}
+
 	path := filepath.Join(h.publicDir, "campaign", "custom-statblocks.json")
 
 	switch r.Method {
@@ -438,18 +492,18 @@ type characterIndexEntry struct {
 	ArmorClass        string `json:"armorClass"`
 	HpCurrent         string `json:"hpCurrent"`
 	HpMax             string `json:"hpMax"`
-	PassivePerception  string `json:"passivePerception"`
-	CurrentConditions  string `json:"currentConditions"`
+	PassivePerception string `json:"passivePerception"`
+	CurrentConditions string `json:"currentConditions"`
 	File              string `json:"file"`
 	UpdatedAt         string `json:"updatedAt"`
 }
 
 type characterFile struct {
-	ID         string         `json:"id"`
-	Summary    characterSummary `json:"summary"`
-	Fields     map[string]any `json:"fields"`
-	CustomLists map[string]any `json:"customLists"`
-	UpdatedAt  string         `json:"updatedAt"`
+	ID          string           `json:"id"`
+	Summary     characterSummary `json:"summary"`
+	Fields      map[string]any   `json:"fields"`
+	CustomLists map[string]any   `json:"customLists"`
+	UpdatedAt   string           `json:"updatedAt"`
 }
 
 type characterSummary struct {
@@ -490,11 +544,6 @@ func writeJSON(w http.ResponseWriter, status int, value any) {
 func writeRawJSON(w http.ResponseWriter, status int, raw []byte) {
 	w.WriteHeader(status)
 	_, _ = w.Write(raw)
-}
-
-func setJSONHeaders(w http.ResponseWriter) {
-	w.Header().Set("Content-Type", "application/json")
-	w.Header().Set("Cache-Control", "no-store")
 }
 
 func readCharacterBytes(raw []byte) (characterFile, error) {

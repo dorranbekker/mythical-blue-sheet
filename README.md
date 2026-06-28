@@ -17,7 +17,9 @@ Local server
 → shared /api filesystem handlers
 → public/characters and public/campaign JSON files
 
-`MYTHICAL_BLUE_STORAGE_MODE` can force the local server to use `api` or `local` mode.
+`MYTHICAL_BLUE_STORAGE_MODE` can force the server to use `api`, `local`, or `s3` mode.
+
+If a `.env` file exists at startup, it is loaded after the process environment and wins on conflicts.
 ```
 
 This prevents an accidental repository copy from silently switching production
