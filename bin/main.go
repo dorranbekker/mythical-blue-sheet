@@ -10,6 +10,7 @@ import (
 
 func main() {
 	mux := http.NewServeMux()
+	mux.Handle("/config.js", server.NewConfigHandler())
 	mux.Handle("/api/", server.NewAPIHandler(filepath.Join("public")))
 	mux.Handle("/", http.FileServer(http.Dir("public")))
 

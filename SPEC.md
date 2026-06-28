@@ -15,6 +15,8 @@ GitHub Pages / localhost
 Local server
 -> shared /api filesystem handlers
 -> public/characters and public/campaign JSON files
+
+`MYTHICAL_BLUE_STORAGE_MODE` can force the local server to use `api` or `local` mode.
 ```
 
 This prevents an accidental repository copy from silently switching production into localStorage mode.
