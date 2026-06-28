@@ -15,6 +15,9 @@ import (
 
 var safeID = regexp.MustCompile(`^[a-zA-Z0-9_-]+$`)
 
+const maxJSONBytes int64 = 5 * 1024 * 1024
+const maxCharacterCount = 50
+
 type apiHandler struct {
 	publicDir string
 }
@@ -149,7 +152,7 @@ func (h apiHandler) handleGetCharacter(w http.ResponseWriter, characterID string
 }
 
 func (h apiHandler) handleSaveCharacter(w http.ResponseWriter, r *http.Request) {
-	body, err := readJSONBody(r)
+	body, err := readJSONBody(w, r)
 	if err != nil {
 		writeJSON(w, http.StatusBadRequest, apiError{Error: err.Error()})
 		return
@@ -170,6 +173,19 @@ func (h apiHandler) handleSaveCharacter(w http.ResponseWriter, r *http.Request) 
 	if existingErr != nil && !os.IsNotExist(existingErr) {
 		writeJSON(w, http.StatusInternalServerError, apiError{Error: existingErr.Error()})
 		return
+	}
+
+	creatingNewCharacter := os.IsNotExist(existingErr)
+	if creatingNewCharacter {
+		count, err := h.countCharacters()
+		if err != nil {
+			writeJSON(w, http.StatusInternalServerError, apiError{Error: err.Error()})
+			return
+		}
+		if count >= maxCharacterCount {
+			writeJSON(w, http.StatusTooManyRequests, apiError{Error: "Character limit reached."})
+			return
+		}
 	}
 
 	if existingErr == nil && existing.ID != characterID {
@@ -206,7 +222,7 @@ func (h apiHandler) handleSaveCharacter(w http.ResponseWriter, r *http.Request) 
 }
 
 func (h apiHandler) handleSaveCharacterStatus(w http.ResponseWriter, r *http.Request, characterID string) {
-	body, err := readJSONBody(r)
+	body, err := readJSONBody(w, r)
 	if err != nil {
 		writeJSON(w, http.StatusBadRequest, apiError{Error: err.Error()})
 		return
@@ -260,7 +276,7 @@ func (h apiHandler) handleSaveCharacterStatus(w http.ResponseWriter, r *http.Req
 }
 
 func (h apiHandler) handleDeleteCharacter(w http.ResponseWriter, r *http.Request, characterID string) {
-	body, err := readJSONBody(r)
+	body, err := readJSONBody(w, r)
 	if err != nil {
 		writeJSON(w, http.StatusBadRequest, apiError{Error: err.Error()})
 		return
@@ -313,7 +329,7 @@ func (h apiHandler) handleCampaignState(w http.ResponseWriter, r *http.Request) 
 
 		writeRawJSON(w, http.StatusOK, raw)
 	case http.MethodPost:
-		body, err := readJSONBody(r)
+		body, err := readJSONBody(w, r)
 		if err != nil {
 			writeJSON(w, http.StatusBadRequest, apiError{Error: err.Error()})
 			return
@@ -375,7 +391,7 @@ func (h apiHandler) handleCustomStatblocks(w http.ResponseWriter, r *http.Reques
 
 		writeRawJSON(w, http.StatusOK, raw)
 	case http.MethodPost:
-		body, err := readJSONBody(r)
+		body, err := readJSONBody(w, r)
 		if err != nil {
 			writeJSON(w, http.StatusBadRequest, apiError{Error: err.Error()})
 			return
@@ -446,9 +462,13 @@ type characterSummary struct {
 	CurrentConditions string `json:"currentConditions"`
 }
 
-func readJSONBody(r *http.Request) (map[string]any, error) {
+func readJSONBody(w http.ResponseWriter, r *http.Request) (map[string]any, error) {
+	r.Body = http.MaxBytesReader(w, r.Body, maxJSONBytes)
 	data, err := io.ReadAll(r.Body)
 	if err != nil {
+		if strings.Contains(err.Error(), "request body too large") {
+			return nil, fmt.Errorf("Request body exceeds 5MB limit.")
+		}
 		return nil, err
 	}
 	if len(strings.TrimSpace(string(data))) == 0 {
@@ -507,6 +527,9 @@ func writeJSONObject(path string, value any) error {
 	data, err := json.MarshalIndent(value, "", "  ")
 	if err != nil {
 		return err
+	}
+	if int64(len(data)) > maxJSONBytes {
+		return fmt.Errorf("JSON payload exceeds 5MB limit.")
 	}
 	data = append(data, '\n')
 
@@ -661,6 +684,28 @@ func ensureMap(value map[string]any) map[string]any {
 		return map[string]any{}
 	}
 	return value
+}
+
+func (h apiHandler) countCharacters() (int, error) {
+	entries, err := os.ReadDir(filepath.Join(h.publicDir, "characters"))
+	if err != nil {
+		if os.IsNotExist(err) {
+			return 0, nil
+		}
+		return 0, err
+	}
+
+	count := 0
+	for _, entry := range entries {
+		if entry.IsDir() || !strings.HasSuffix(entry.Name(), ".json") {
+			continue
+		}
+		if entry.Name() == "character-index.json" || entry.Name() == "test-character-index.json" {
+			continue
+		}
+		count++
+	}
+	return count, nil
 }
 
 func defaultCampaignState() map[string]any {
